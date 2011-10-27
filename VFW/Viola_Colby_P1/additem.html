@@ -12,14 +12,30 @@
 		<h1> Get Your Movie On</h1>
 		<form action="#" method="post">
 			<fieldset>
-				<legend>Add To List</legend>
+				<legend>What Movie Was It?:</legend>
 				<ul>
-					<li><label for="fname">Film Name:<label><input type ="text" id="fname" /></li>
-					<li><label for="tlink">Trailer Link:<label><input type ="url" id="tlink" placeholder.com="www.awesometrailer.com" /></li>
+					<li><label for="fname">Film Name:</label><input type ="text" id="fname" /></li>
+					<li><label for="tlink">Trailer Link:</label><input type ="url" id="tlink" placeholder.com="www.awesometrailer.com" /></li>
+					<li><input type="range" min="1" max ="10" name="rating" type ="range"/><label for="rating">On a scale of 1 to 10, how good does this movie look like it will be:</label></li>
 				</ul>
 			</fieldset>
 			<fieldset>
 				<legend>About The Film</legend>
 				<ul>
+					<li>Check Genre Types:
+						<ul>
+							<li><input type="checkbox" checked value="Comedy" id=comedy" /><label for="comedy">Comedy</label></li>
+							<li><input type="checkbox" checked value="Drama" id=drama" /><label for="drama">Drama</label></li>
+							<li><input type="checkbox" checked value="Thriller" id=thriller" /><label for="thriller">Thriller</label></li>
+							<li><input type="checkbox" checked value="Horror" id=horror" /><label for="horror">Horror</label></li>
+							<li><input type="checkbox" checked value="Documentary" id=documentary" /><label for="documentary">Documentary</label></li>
+						</ul>
+					</li>
+					<li>Release Date:
+						<li><input type="radio" checked value="Theaters" id="theater" name="place" /><label for="theater">Theaters</label></li>
+						<li><input type="radio" value="Home Release" id="home release" name="place" /><label for="home release">Home Release</label></li>
+						<li><input type="radio" value="Unknown" id="unknown" name="place" /><label for="unknown">Unknown</label></li>
+						
 					
 		</form>
+		
