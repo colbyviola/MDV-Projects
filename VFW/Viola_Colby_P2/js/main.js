@@ -4,7 +4,7 @@
 // Mobile Development
 // Full Sail University
 
-window.addEventlistener("DOMContentLoaded", function(){
+window.addEventListener("DOMContentLoaded", function(){
 	//getElementById Function
 	function $(x){
 		var theElement = document.getElementById(x);
@@ -17,25 +17,35 @@ window.addEventlistener("DOMContentLoaded", function(){
 			selectLi = $("select"),
 			makeSelect = document.createElement("select");
 			makeSelect.setAttribute("id", "groups"); //makeSelect has an "id" of groups
-		for(var i=0, j=contactGroups.length; i<j; i++){
+		for(var i=0, j=movieGroup.length; i<j; i++){
 			var makeOption = document.createElement ("option");
-			var optText = movieList[i];
+			var optText = movieGroup[i];
 			makeOption.setAttribute("value", optText); // setAttribute has a "value" of optText
 			makeOption.innerHTML = optText;
 			makeSelect.appendChild(makeOption);
 		}
 		selectLi.appendChild(makeSelect);
 	}
+	
+	function storeData(){
+		localStorage.setItem("test","hello")
+		alert(localStorage.length);
+	}
+	
+	
 	//Variable defaults
-	var movieList = ["--Choose A Group--", "DVD", "Theaters", "Unknown"];
+	var movieGroup = ["--Choose A Group--", "DVD", "Theaters", "Unknown"];
 	makeCats();
 
 //Set link & submit click events
+/*
 	var displayLink = $("displayLink");
 	displayLink.addEventListener("click", getData);
 	var clearLink = $("clear");
 	clearLink.addEventListener("click", clearLocal);
+	*/
 	var save = $("submit");
 	save.addEventListener("click", storeData);
 	}
+
 );
