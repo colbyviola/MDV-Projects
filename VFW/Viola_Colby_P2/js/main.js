@@ -26,26 +26,84 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 		selectLi.appendChild(makeSelect);
 	}
-	
-	function storeData(){
-		localStorage.setItem("test","hello")
-		alert(localStorage.length);
+	//Find value of selected radio button.
+	function getSelectedRadio(){
+		var radios = document.forms[0].pview;
+		for(var i=0; i<radios.length; i++){
+			if(radios[i].checked){
+				pviewValue = radios[i].value;
+			}
+		}
 	}
 	
 	
+	function getCheckedBox(){
+		if($("genre").checked){
+			genreValue = $("genre").value;
+		}
+	}
+	
+	function storeData(){
+		var id			= Math.floor(Math.random()*100001);
+		//Gather up all our form field values and store in an object.
+		//Object properties contain array with the form label and input value.
+		getSelectedRadio();
+		getCheckedBox();
+		var item			= {};
+			item.group		= ["Group", $("groups").value];
+			item.fname 		= ["Film Name", $("fname").value];
+			item.rdate 		= ["Release Date", $("rdate").value];
+			item.pview		= ["Previously Viewed", pviewValue];
+			item.genre 		= ["Genre:", genreValue];
+			item.rating		= ["Rating", $("range").value];
+			item.tlink		= ["Trailer Link", $("tlink").value];
+			item.comments	= ["Comments", $("comments").value];
+		//Save data into Local Storage: Use Stringify to convert our object to a string.
+		localStorage.setItem(id, JSON.stringify(item));
+		alert("Movie Saved!");
+	}
+	
+	function getData(){
+		//Write Data from Local Storage to the browser.
+		var makeDiv = document.createElement("div");
+		makeDiv.setAttribute("id", "items");
+		var makeList = document.createElement("ul");
+		makeDiv.appendChild(makeList);
+		document.body.appendChild(makeDiv);
+		for(var i=0, len=localStorage.length; i<len;i++){
+			var makeli = document.createElement("li");
+			makeList.appendChild(makeli);
+			var key = localStorage.key(i);
+			var value = localStorage.getItem(key);
+			//Convert sting from local storage value back to an object by using JSON.parse()
+			var obj = JSON.parse(value);
+			var makeSubList = document.createElement("ul");
+			makeli.appendChild(makeSubList);
+			for(var n in obj){
+				var makeSubli = document.createElement("li");
+				makeSubList.appendChild(makeSubli);
+				var optSubText = obj[n][0]+" "+obj[n][1];
+				makeSubli.innerHTML = optSubText;
+				
+			}
+		}
+	}
+	
 	//Variable defaults
-	var movieGroup = ["--Choose A Group--", "DVD", "Theaters", "Unknown"];
+	var movieGroup = ["--Choose A Group--", "DVD", "Theaters", "Unknown"],
+		genreValue,
+		pviewValue
+	;
 	makeCats();
 
 //Set link & submit click events
-/*
+
 	var displayLink = $("displayLink");
-	displayLink.addEventListener("click", getData);
+	displayLink.addEventListener("click", getData);/*
 	var clearLink = $("clear");
-	clearLink.addEventListener("click", clearLocal);
-	*/
+	clearLink.addEventListener("click", clearLocal);*/
 	var save = $("submit");
 	save.addEventListener("click", storeData);
-	}
+	
 
-);
+});
