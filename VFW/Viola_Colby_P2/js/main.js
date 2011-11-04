@@ -5,6 +5,7 @@
 // Full Sail University
 
 window.addEventListener("DOMContentLoaded", function(){
+
 	//getElementById Function
 	function $(x){
 		var theElement = document.getElementById(x);
@@ -134,7 +135,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	;
 	makeCats();
 
-//Set link & submit click events
+	//Set link & submit click events
 
 	var displayLink = $("displayLink");
 	displayLink.addEventListener("click", getData);
