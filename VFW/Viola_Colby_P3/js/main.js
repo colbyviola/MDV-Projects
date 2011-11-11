@@ -42,7 +42,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		if($("yes").checked){
 			pviewValue = $("pview").value;
 		}else{
-			pviewValue= "No"
+			pviewValue= "No";
 		}
 	}
 	
@@ -126,6 +126,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			makeItemLinks(localStorage.key(i), linksLi); //Creates edit and delete buttons/links for each item in local storage.
 		}
 	}
+	
 	//Make Item Links
 	//Create the edit and delete links for each stored item when displayed.
 	function makeItemLinks(){
@@ -137,11 +138,9 @@ window.addEventListener("DOMContentLoaded", function(){
 		editLink.addEventListener("click", editItem);
 		editLink.innerHTML = editText;
 		linksLi.appendChild(editLink);
-		
 		//add line break
 		var breakTag = document.createElement ("br");
-		linksLi.appendChild(breakTag);
-		
+		linksLi.appendChild(breakTag);	
 		//add delete single item link
 		var deleteLink = document.createElement("a");
 		deleteLink.href = "#";
@@ -156,10 +155,8 @@ window.addEventListener("DOMContentLoaded", function(){
 		//Grab the data from our item in local storage.
 		var value = localStorage.getItem(this.key);
 		var item = JSON.parse(value);
-		
 		//shows the form
 		toggleControls("off");
-		
 		//populate the form fields with current localStorage values.
 		$("groups").value = item.group[1];
 		$("fname").value = item.fname[1];
@@ -192,8 +189,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 		$("range").value = item.range[1];
 		$("tlink").value = item.tlink[1];
-		$("comments").value = item.comments[1];
-			
+		$("comments").value = item.comments[1];	
 		//Remove the initial listener from the input "save movie" button.
 		save.removeEventListener("click", storeData);
 		//Change submit button value to say edit button.
@@ -226,17 +222,16 @@ window.addEventListener("DOMContentLoaded", function(){
 			return false;
 		}
 	}
+	
 	//e stands for event data
 	function validate(e){
 		//Define the elements we want to check.
 		var getGroup = $("groups");
 		var getFname = $("fname");
-		
 		//Reset Error messages.
 		errMsg.innerHTML = "";
 		getGroup.style.border = "1px solid black";
 		getFname.style.border = "1px solid black";
-		
 		//Get error messages.
 		var messageAry = [];
 		//Group validation
@@ -245,14 +240,12 @@ window.addEventListener("DOMContentLoaded", function(){
 			getGroup.style.border = "1px solid red";
 			messageAry.push(groupError);
 		}
-		
 		//Film name validation
 		if(getFname.value === ""){
 			var fNameError = "Please enter a film name."
 			getFname.style.border = "1px solid red";
 			messageAry.push(fNameError);
 		}
-		
 		//If there were errors, display them on the screen.
 		if(messageAry.length >= 1){
 			for(var i=0, j=messageAry.length; i < j; i++){
