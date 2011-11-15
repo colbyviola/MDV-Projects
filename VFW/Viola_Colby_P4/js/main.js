@@ -97,7 +97,8 @@ window.addEventListener("DOMContentLoaded", function(){
 	function getData(){
 		toggleControls("on");
 		if(localStorage.length === 0){
-			alert("There is no data to display.");
+		autoFillData();
+			alert("There is no data in Local Storage so default data was added.");
 		}
 		//Write Data from Local Storage to the browser.
 		var makeDiv = document.createElement("div");
@@ -124,6 +125,27 @@ window.addEventListener("DOMContentLoaded", function(){
 				makeSubList.appendChild(linksLi);
 			}
 			makeItemLinks(localStorage.key(i), linksLi); //Creates edit and delete buttons/links for each item in local storage.
+		}
+	}
+	
+	//JSON OBJECT which will auto populate local storage.
+	function autoFillData(){
+		var json = {
+			"movie1": {
+				"group": ["Group:", "Theater"],
+				"fname": ["Film Name:", "Crash"],
+				"rdate": ["Release Date:", "2011-11-11"],
+				"pview": ["Previously Viewed:", "Yes"],
+				"genre": ["Genre:", "Drama"],
+				"range": ["Range:", "8"],
+				"tlink": ["Tralier Link:", "www.crashmovie.com"],
+				"comments": ["Comments", "Movie was awesome!"]
+			}
+		};
+		//Store the JSON OBJECT into local Storage.
+		for(var n in json){
+			var id			= Math.floor(Math.random()*100001);	
+			localStorage.setItem(id, JSON.stringify(json[n]));
 		}
 	}
 	
