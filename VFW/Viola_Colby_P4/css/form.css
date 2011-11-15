@@ -1,0 +1,40 @@
+/*
+
+Title: form.html Styles
+By: Colby Viola
+For: CSS Selectors
+VFW Project 4
+Term 1
+
+*/
+*{font-family: "Times New Roman"; font-size: 14px}
+
+body{margin: auto; padding: 10px;}
+#site-wrapper{background: #B4D8E0;}
+#content {width: 480px; height: 690 px;overflow: scroll;}
+
+a{
+	hover {color: aqua;}
+	active {color: red;}
+	text-decoration: none;
+}
+
+h1{
+	margin: 10px;
+	border: 1px solid black;
+	padding: 5px;
+	background: #CCCCCC;
+	width: 50%;
+	text-align: center;
+}
+
+fieldset{
+	background: #E6E3E4;
+	font-family: "Times New Roman", Times, serif;
+	direction: ltr;
+}
+
+span{
+	color: #E80707;
+	font-style: italic;
+}
