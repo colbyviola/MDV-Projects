@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		var formTag = document.getElementsByTagName("form"), //formTag is an array of all the form tags.
 			selectLi = $("select"),
 			makeSelect = document.createElement("select");
-			makeSelect.setAttribute("id", "groups"); //makeSelect has an "id" of groups
+			makeSelect.setAttribute("id", "group"); //makeSelect has an "id" of groups
 		for(var i=0, j=movieGroup.length; i<j; i++){
 			var makeOption = document.createElement ("option");
 			var optText = movieGroup[i];
@@ -39,7 +39,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	}
 	
 	function getCheckedBox(){
-		if($("yes").checked){
+		if ($("pview").checked){
 			pviewValue = $("pview").value;
 		}else{
 			pviewValue= "No";
@@ -81,7 +81,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		getSelectedRadio();
 		getCheckedBox();
 		var item			= {};
-			item.group		= ["Group", $("groups").value];
+			item.group		= ["Group", $("group").value];
 			item.fname 		= ["Film Name:", $("fname").value];
 			item.rdate 		= ["Release Date:", $("rdate").value];
 			item.pview		= ["Previously Viewed:", pviewValue];
@@ -95,10 +95,10 @@ window.addEventListener("DOMContentLoaded", function(){
 	}
 	
 	function getData(){
-	toggleControls("on");
-	if(localStorage.length === 0){
-		alert("There is no data to display.");
-	}
+		toggleControls("on");
+		if(localStorage.length === 0){
+			alert("There is no data to display.");
+		}
 		//Write Data from Local Storage to the browser.
 		var makeDiv = document.createElement("div");
 		makeDiv.setAttribute("id", "items");
@@ -158,33 +158,33 @@ window.addEventListener("DOMContentLoaded", function(){
 		//shows the form
 		toggleControls("off");
 		//populate the form fields with current localStorage values.
-		$("groups").value = item.group[1];
+		$("group").value = item.group[1];
 		$("fname").value = item.fname[1];
 		$("rdate").value = item.rdate[1];
 		var radios = document.forms[0].pview;
 		for(var i=0; i<radios.length; i++){
-			if (radios[i].value == "Comedy" && item.genre[1] == "Comedy"){
+			if (radios[i].value === "Comedy" && item.genre[1] === "Comedy"){
 				radios[i].setAttribute("checked", "checked");
-			}else if(radios[i].value == "Drama" && item.genre[1] == ("Drama"){
-				radios[i].setAttribute("checked", "checked");
-				}
-			}else if(radios[i].value == "Action" && item.genre[1] == ("Action"){
+			}else if (radios[i].value === "Drama" && item.genre[1] === "Drama"){
 				radios[i].setAttribute("checked", "checked");
 				}
-			}else if(radios[i].value == "Thriller" && item.genre[1] == ("Thriller"){
+			}else if (radios[i].value === "Action" && item.genre[1] === "Action"){
 				radios[i].setAttribute("checked", "checked");
 				}
-			}else if(radios[i].value == "Romance" && item.genre[1] == ("Romance"){
+			}else if (radios[i].value === "Thriller" && item.genre[1] === "Thriller"){
 				radios[i].setAttribute("checked", "checked");
 				}
-			}else if(radios[i].value == "Horror" && item.genre[1] == ("Horror"){
+			}else if (radios[i].value === "Romance" && item.genre[1] === "Romance"){
 				radios[i].setAttribute("checked", "checked");
 				}
-			}else if(radios[i].value == "Documentary" && item.genre[1] == ("Documentary"){
+			}else if (radios[i].value === "Horror" && item.genre[1] === "Horror"){
+				radios[i].setAttribute("checked", "checked");
+				}
+			}else if(radios[i].value === "Documentary" && item.genre[1] === "Documentary"){
 				radios[i].setAttribute("checked", "checked");
 				}
 			}
-		if(item.pview[1] == "Yes"){
+		if(item.pview[1] === "Yes"){
 			$("pview").setAttribute("checked", "checked");
 		}
 		$("range").value = item.range[1];
@@ -226,7 +226,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	//e stands for event data
 	function validate(e){
 		//Define the elements we want to check.
-		var getGroup = $("groups");
+		var getGroup = $("group");
 		var getFname = $("fname");
 		//Reset Error messages.
 		errMsg.innerHTML = "";
@@ -266,7 +266,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	//Variable defaults
 	var movieGroup = ["--Choose A Group--", "DVD", "Theaters", "Unknown"],
 		genreValue,
-		pviewValue = "No"
+		pviewValue = "No",
 		errMsg = $("errors")
 	;
 	makeCats();
