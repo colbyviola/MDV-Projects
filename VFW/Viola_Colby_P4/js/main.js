@@ -88,7 +88,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			item.genre 		= ["Genre:", genreValue];
 			item.range		= ["Rating", $("range").value];
 			item.tlink		= ["Trailer Link", $("tlink").value];
-			item.comments	= ["Comments", $("comments").value];
+			item.comments	= ["Comments:", $("comments").value];
 		//Save data into Local Storage: Use Stringify to convert our object to a string.
 		localStorage.setItem(id, JSON.stringify(item));
 		alert("Movie Saved!");
@@ -117,6 +117,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			var obj = JSON.parse(value);
 			var makeSubList = document.createElement("ul");
 			makeli.appendChild(makeSubList);
+			getImage(obj.group[1], makeSubList);
 			for(var n in obj){
 				var makeSubli = document.createElement("li");
 				makeSubList.appendChild(makeSubli);
@@ -126,6 +127,14 @@ window.addEventListener("DOMContentLoaded", function(){
 			}
 			makeItemLinks(localStorage.key(i), linksLi); //Creates edit and delete buttons/links for each item in local storage.
 		}
+	}
+	//get the image for the right category.
+	function getImage(catName, makeSubList){
+		var imageLi = document.createElement("li");
+		makeSubList.appendChild(imageLi);
+		var newImg = document.createElement("img");
+		var setSrc = newImg.setAttribute("src", "images/"+ catName + ".png");
+		imageLi.appendChild(newImg);
 	}
 	
 	//JSON OBJECT which will auto populate local storage.
@@ -138,8 +147,8 @@ window.addEventListener("DOMContentLoaded", function(){
 				"pview": ["Previously Viewed:", "Yes"],
 				"genre": ["Genre:", "Drama"],
 				"range": ["Range:", "8"],
-				"tlink": ["Tralier Link:", "www.crashmovie.com"],
-				"comments": ["Comments", "Movie was awesome!"]
+				"tlink": ["Trailer Link:", "www.crashmovie.com"],
+				"comments": ["Comments:", "Crash was crazy!"]
 			}
 		};
 		//Store the JSON OBJECT into local Storage.
@@ -187,25 +196,20 @@ window.addEventListener("DOMContentLoaded", function(){
 		for(var i=0; i<radios.length; i++){
 			if (radios[i].value === "Comedy" && item.genre[1] === "Comedy"){
 				radios[i].setAttribute("checked", "checked");
-			}else if (radios[i].value === "Drama" && item.genre[1] === "Drama"){
+			}else if (radios[i].value === "Drama" && item.genre[2] === "Drama"){
 				radios[i].setAttribute("checked", "checked");
-				}
-			}else if (radios[i].value === "Action" && item.genre[1] === "Action"){
+			}else if (radios[i].value === "Action" && item.genre[3] === "Action"){
 				radios[i].setAttribute("checked", "checked");
-				}
-			}else if (radios[i].value === "Thriller" && item.genre[1] === "Thriller"){
+			}else if (radios[i].value === "Thriller" && item.genre[4] === "Thriller"){
 				radios[i].setAttribute("checked", "checked");
-				}
-			}else if (radios[i].value === "Romance" && item.genre[1] === "Romance"){
+			}else if (radios[i].value === "Romance" && item.genre[5] === "Romance"){
 				radios[i].setAttribute("checked", "checked");
-				}
-			}else if (radios[i].value === "Horror" && item.genre[1] === "Horror"){
+			}else if (radios[i].value === "Horror" && item.genre[6] === "Horror"){
 				radios[i].setAttribute("checked", "checked");
-				}
-			}else if(radios[i].value === "Documentary" && item.genre[1] === "Documentary"){
+			}else if(radios[i].value === "Documentary" && item.genre[7] === "Documentary"){
 				radios[i].setAttribute("checked", "checked");
-				}
 			}
+		}
 		if(item.pview[1] === "Yes"){
 			$("pview").setAttribute("checked", "checked");
 		}
@@ -224,19 +228,19 @@ window.addEventListener("DOMContentLoaded", function(){
 	}
 	
 	function deleteItem(){
-		var ask = confirm("Are you sure you want to delete this movie?")
+		var ask = confirm("Are you sure you want to delete this movie?");
 		if(ask){
 			localStorage.removeItem(this.key);
 			alert("Movie was deleted");
 			window.location.reload();
 		}else{
-			alert("Movie was not deleted.")
+			alert("Movie was not deleted.");
 		}
 	}
 	
 	function clearLocal(){
 		if(localStorage.length === 0){
-			alert("There is no data to clear.")
+			alert("There is no data to clear.");
 		}else{
 			localStorage.clear();
 			alert("The entire movie list is deleted!");
@@ -257,14 +261,14 @@ window.addEventListener("DOMContentLoaded", function(){
 		//Get error messages.
 		var messageAry = [];
 		//Group validation
-		if(getGroup.value === "--Choose A Group--")
+		if(getGroup.value === "--Choose A Group--"){
 			var groupError = "Please choose a group.";
 			getGroup.style.border = "1px solid red";
 			messageAry.push(groupError);
 		}
 		//Film name validation
 		if(getFname.value === ""){
-			var fNameError = "Please enter a film name."
+			var fNameError = "Please enter a film name.";
 			getFname.style.border = "1px solid red";
 			messageAry.push(fNameError);
 		}
@@ -289,18 +293,15 @@ window.addEventListener("DOMContentLoaded", function(){
 	var movieGroup = ["--Choose A Group--", "DVD", "Theaters", "Unknown"],
 		genreValue,
 		pviewValue = "No",
-		errMsg = $("errors")
+		errMsg = $("errors");
 	;
 	makeCats();
-
+	
 	//Set link & submit click events
-
 	var displayLink = $("displayLink");
 	displayLink.addEventListener("click", getData);
 	var clearLink = $("clear");
 	clearLink.addEventListener("click", clearLocal);
 	var save = $("submit");
 	save.addEventListener("click", validate);
-	
-
 });
