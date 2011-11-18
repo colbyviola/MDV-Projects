@@ -107,7 +107,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		makeDiv.appendChild(makeList);
 		document.body.appendChild(makeDiv);
 		$("items").style.display = "block";
-		for(var i=0, len=localStorage.length; i<len;i++){
+		for(var i=0, len=localStorage.length; i<len; i++){
 			var makeli = document.createElement("li");
 			var linksLi = document.createElement("li");
 			makeList.appendChild(makeli);
@@ -157,6 +157,52 @@ window.addEventListener("DOMContentLoaded", function(){
 			localStorage.setItem(id, JSON.stringify(json[n]));
 		}
 	}
+	
+	function editItem(){
+		//Grab the data from our item in local storage.
+		var value = localStorage.getItem(this.key);
+		var item = JSON.parse(value);
+		//shows the form
+		toggleControls("off");
+		//populate the form fields with current localStorage values.
+		$("group").value = item.group[1];
+		$("fname").value = item.fname[1];
+		$("rdate").value = item.rdate[1];
+		var radios = document.forms[0].pview;
+		for(var i=0; i<radios.length; i++){
+			if (radios[i].value === "Comedy" && item.genre[1] === "Comedy"){
+				radios[i].setAttribute("checked", "checked");
+			}else if (radios[i].value === "Drama" && item.genre[2] === "Drama"){
+				radios[i].setAttribute("checked", "checked");
+			}else if (radios[i].value === "Action" && item.genre[3] === "Action"){
+				radios[i].setAttribute("checked", "checked");
+			}else if (radios[i].value === "Thriller" && item.genre[4] === "Thriller"){
+				radios[i].setAttribute("checked", "checked");
+			}else if (radios[i].value === "Romance" && item.genre[5] === "Romance"){
+				radios[i].setAttribute("checked", "checked");
+			}else if (radios[i].value === "Horror" && item.genre[6] === "Horror"){
+				radios[i].setAttribute("checked", "checked");
+			}else if(radios[i].value === "Documentary" && item.genre[7] === "Documentary"){
+				radios[i].setAttribute("checked", "checked");
+			}
+		}
+		if(item.pview[1] === "Yes"){
+			$("pview").setAttribute("checked", "checked");
+		}
+		$("range").value = item.range[1];
+		$("tlink").value = item.tlink[1];
+		$("comments").value = item.comments[1];	
+		//Remove the initial listener from the input "save movie" button.
+		save.removeEventListener("click", storeData);
+		//Change submit button value to say edit button.
+		$("submit").value = "Edit Movie";
+		var editSubmit = $("submit");
+		//Save the key value established in this function as a property of the editSubmit event
+		//so we can use that value when edited data is saved.
+		editSubmit.addEventListener("click", validate);
+		editSubmit.key = this.key;
+	}
+	
 	
 	//Make Item Links
 	//Create the edit and delete links for each stored item when displayed.
@@ -293,8 +339,9 @@ window.addEventListener("DOMContentLoaded", function(){
 	var movieGroup = ["--Choose A Group--", "DVD", "Theaters", "Unknown"],
 		genreValue,
 		pviewValue = "No",
-		errMsg = $("errors");
-	;
+		errMsg = $("errors")
+		;
+		
 	makeCats();
 	
 	//Set link & submit click events
