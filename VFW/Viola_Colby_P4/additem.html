@@ -20,6 +20,7 @@
 			<fieldset id="movieFieldset">
 				<legend>What Movie Was It?:</legend>
 				<span>* fields are required.</span>
+				<div id="navcontainer">
 				<ul id="errors"></ul>
 				<ul id="questions">
 					<li id="select"><label for "group">*Add to Group:</label><br /></li>
@@ -27,7 +28,7 @@
 					<li><label for="rdate">Release Date:</label><input type="date" min="1900-01-01" max="2020-01-01" id="rdate" name="rdate" required aria-required="false" placeholder="2008-07-04" /></li>
 					<li><input type="checkbox" id="pview" value="Yes" class="checkbox" /><label for="pview"> Previously Viewed?</label></li>
 					<li><label for="genre">Select Main Genre Type: </label>
-						<ul class="checkbox">
+						<ul class="checkbox"><div id="navcontainer">
 							<li><input type="radio" checked value="Comedy" id="comedy" name="genre" /><label for="comedy">Comedy</label></li>
 							<li><input type="radio" value="Drama" id="drama" name="genre" /><label for="drama">Drama</label></li>
 							<li><input type="radio" value="Action" id="action" name="genre" /><label for="action">Action</label></li>
@@ -41,6 +42,7 @@
 					<li><label for="rating">On a scale from 1 to 10, how good does this movie look:</label><input type="range" min="1" max ="10" id="range"/></li>
 					<li><label for="comments">Additional comments:</label><textarea id="comments"></textarea></li>
 				</ul>
+				</div>
 			</fieldset>
 			<input type="submit" value="Submit" id="submit" /><br />
 		</form>
