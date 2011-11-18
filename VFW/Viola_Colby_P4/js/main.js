@@ -142,13 +142,13 @@ window.addEventListener("DOMContentLoaded", function(){
 		var json = {
 			"movie1": {
 				"group": ["Group:", "Theater"],
-				"fname": ["Film Name:", "Crash"],
+				"fname": ["Film Name:", "Immortals"],
 				"rdate": ["Release Date:", "2011-11-11"],
-				"pview": ["Previously Viewed:", "Yes"],
-				"genre": ["Genre:", "Drama"],
-				"range": ["Range:", "8"],
-				"tlink": ["Trailer Link:", "www.crashmovie.com"],
-				"comments": ["Comments:", "Crash was crazy!"]
+				"pview": ["Previously Viewed:", "No"],
+				"genre": ["Genre:", "Action"],
+				"range": ["Range:", "7"],
+				"tlink": ["Trailer Link:", "www.immortalsmovie.com"],
+				"comments": ["Comments:", "Probably not going to be the next 300."]
 			}
 		};
 		//Store the JSON OBJECT into local Storage.
@@ -237,7 +237,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			alert("Movie was not deleted.");
 		}
 	}
-	
+
 	function clearLocal(){
 		if(localStorage.length === 0){
 			alert("There is no data to clear.");
@@ -248,7 +248,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			return false;
 		}
 	}
-	
+
 	//e stands for event data
 	function validate(e){
 		//Define the elements we want to check.
