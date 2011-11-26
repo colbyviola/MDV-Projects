@@ -1,6 +1,6 @@
 // Colby Viola
-// Project 4
-// Visual Frameworks (VFW)
+// Project 1
+// Mobile Interfaces and Usability (MIU)
 // Mobile Development
 // Full Sail University
 
@@ -164,183 +164,183 @@ window.addEventListener("DOMContentLoaded", function(){
 			},
 			"movie3": {
 				"group": ["Group:", "DVD"],
-				"fname": ["Film Name:", "300"],
-				"rdate": ["Release Date:", "2009-10-10"],
+				"fname": ["Film Name:", "The Shawshank Redemption"],
+				"rdate": ["Release Date:", "1994-08-23"],
 				"pview": ["Previously Viewed:", "Yes"],
-				"genre": ["Genre:", "Action"],
+				"genre": ["Genre:", "Drama"],
 				"range": ["Range:", "10"],
-				"tlink": ["Trailer Link:", "www.300movie.com"],
-				"comments": ["Comments:", "Epic."]
+				"tlink": ["Trailer Link:", "www.shawshankredemption.com"],
+				"comments": ["Comments:", "Number 1 Drama!"]
 			},
 			"movie4": {
-				"group": ["Group:", "DVD"],
-				"fname": ["Film Name:", "300"],
-				"rdate": ["Release Date:", "2009-10-10"],
-				"pview": ["Previously Viewed:", "Yes"],
-				"genre": ["Genre:", "Action"],
-				"range": ["Range:", "10"],
-				"tlink": ["Trailer Link:", "www.300movie.com"],
-				"comments": ["Comments:", "Epic."]
+				"group": ["Group:", "Theater"],
+				"fname": ["Film Name:", "Carnage"],
+				"rdate": ["Release Date:", "2011-12-16"],
+				"pview": ["Previously Viewed:", "No"],
+				"genre": ["Genre:", "Comedy"],
+				"range": ["Range:", "06"],
+				"tlink": ["Trailer Link:", "www.carnagemovie.com"],
+				"comments": ["Comments:", "John Reilly is a little iffy."]
 			},
 			"movie5": {
 				"group": ["Group:", "DVD"],
-				"fname": ["Film Name:", "300"],
-				"rdate": ["Release Date:", "2009-10-10"],
+				"fname": ["Film Name:", "WALL-E"],
+				"rdate": ["Release Date:", "2008-06-27"],
 				"pview": ["Previously Viewed:", "Yes"],
-				"genre": ["Genre:", "Action"],
+				"genre": ["Genre:", "Romance"],
 				"range": ["Range:", "10"],
-				"tlink": ["Trailer Link:", "www.300movie.com"],
-				"comments": ["Comments:", "Epic."]
+				"tlink": ["Trailer Link:", "www.wallemovie.com"],
+				"comments": ["Comments:", "Amazing Pixar animation."]
 			},
 			"movie6": {
-				"group": ["Group:", "DVD"],
-				"fname": ["Film Name:", "300"],
-				"rdate": ["Release Date:", "2009-10-10"],
-				"pview": ["Previously Viewed:", "Yes"],
-				"genre": ["Genre:", "Action"],
-				"range": ["Range:", "10"],
-				"tlink": ["Trailer Link:", "www.300movie.com"],
-				"comments": ["Comments:", "Epic."]
+				"group": ["Group:", "Theater"],
+				"fname": ["Film Name:", "The Innkeepers"],
+				"rdate": ["Release Date:", "2012-02-03"],
+				"pview": ["Previously Viewed:", "No"],
+				"genre": ["Genre:", "Thriller"],
+				"range": ["Range:", "04"],
+				"tlink": ["Trailer Link:", "www.Theinnkeepersmovie.com"],
+				"comments": ["Comments:", "Looks a little lame."]
 			},
 			"movie7": {
 				"group": ["Group:", "DVD"],
-				"fname": ["Film Name:", "300"],
-				"rdate": ["Release Date:", "2009-10-10"],
+				"fname": ["Film Name:", "Inception"],
+				"rdate": ["Release Date:", "2010-07-16"],
 				"pview": ["Previously Viewed:", "Yes"],
-				"genre": ["Genre:", "Action"],
+				"genre": ["Genre:", "Thriller"],
 				"range": ["Range:", "10"],
-				"tlink": ["Trailer Link:", "www.300movie.com"],
-				"comments": ["Comments:", "Epic."]
+				"tlink": ["Trailer Link:", "www.inceptionmovie.com"],
+				"comments": ["Comments:", "Mind bending."]
 			},
 			"movie8": {
 				"group": ["Group:", "DVD"],
-				"fname": ["Film Name:", "300"],
-				"rdate": ["Release Date:", "2009-10-10"],
+				"fname": ["Film Name:", "Food Inc"],
+				"rdate": ["Release Date:", "2008-06-04"],
 				"pview": ["Previously Viewed:", "Yes"],
-				"genre": ["Genre:", "Action"],
-				"range": ["Range:", "10"],
-				"tlink": ["Trailer Link:", "www.300movie.com"],
-				"comments": ["Comments:", "Epic."]
+				"genre": ["Genre:", "Documentary"],
+				"range": ["Range:", "08"],
+				"tlink": ["Trailer Link:", "www.foodincmovie.com"],
+				"comments": ["Comments:", "And interesting look at the food industry."]
 			},
 			"movie9": {
 				"group": ["Group:", "DVD"],
-				"fname": ["Film Name:", "300"],
-				"rdate": ["Release Date:", "2009-10-10"],
-				"pview": ["Previously Viewed:", "Yes"],
-				"genre": ["Genre:", "Action"],
-				"range": ["Range:", "10"],
-				"tlink": ["Trailer Link:", "www.300movie.com"],
-				"comments": ["Comments:", "Epic."]
+				"fname": ["Film Name:", "Life Is Beautiful"],
+				"rdate": ["Release Date:", "1998-10-23"],
+				"pview": ["Previously Viewed:", "No"],
+				"genre": ["Genre:", "Romance"],
+				"range": ["Range:", "07"],
+				"tlink": ["Trailer Link:", "www.imdb.com"],
+				"comments": ["Comments:", "An Italian romance about a Jewish man during Hitler's takeover."]
 			},
 			"movie10": {
 				"group": ["Group:", "DVD"],
-				"fname": ["Film Name:", "300"],
-				"rdate": ["Release Date:", "2009-10-10"],
+				"fname": ["Film Name:", "Forrest Gump"],
+				"rdate": ["Release Date:", "1994-07-06"],
 				"pview": ["Previously Viewed:", "Yes"],
-				"genre": ["Genre:", "Action"],
+				"genre": ["Genre:", "Comedy"],
 				"range": ["Range:", "10"],
-				"tlink": ["Trailer Link:", "www.300movie.com"],
-				"comments": ["Comments:", "Epic."]
+				"tlink": ["Trailer Link:", "www.imdb.com"],
+				"comments": ["Comments:", "Who doesn't like Forrest Gump!?"]
 			},
 			"movie11": {
-				"group": ["Group:", "DVD"],
-				"fname": ["Film Name:", "300"],
-				"rdate": ["Release Date:", "2009-10-10"],
-				"pview": ["Previously Viewed:", "Yes"],
-				"genre": ["Genre:", "Action"],
-				"range": ["Range:", "10"],
-				"tlink": ["Trailer Link:", "www.300movie.com"],
-				"comments": ["Comments:", "Epic."]
+				"group": ["Group:", "Unknown"],
+				"fname": ["Film Name:", "Tucker and Dale vs Evil"],
+				"rdate": ["Release Date:", "2011-08-30"],
+				"pview": ["Previously Viewed:", "No"],
+				"genre": ["Genre:", "Horror"],
+				"range": ["Range:", "09"],
+				"tlink": ["Trailer Link:", "www.tuckeranddale.com"],
+				"comments": ["Comments:", "Looks like the funniest horror ever made."]
 			},
 			"movie12": {
 				"group": ["Group:", "DVD"],
-				"fname": ["Film Name:", "300"],
-				"rdate": ["Release Date:", "2009-10-10"],
-				"pview": ["Previously Viewed:", "Yes"],
-				"genre": ["Genre:", "Action"],
+				"fname": ["Film Name:", "The Godfather"],
+				"rdate": ["Release Date:", "1972-03-24"],
+				"pview": ["Previously Viewed:", "No"],
+				"genre": ["Genre:", "Drama"],
 				"range": ["Range:", "10"],
-				"tlink": ["Trailer Link:", "www.300movie.com"],
-				"comments": ["Comments:", "Epic."]
+				"tlink": ["Trailer Link:", "www.thegodfather.com"],
+				"comments": ["Comments:", "Have yet to see how great it is."]
 			},
 			"movie13": {
 				"group": ["Group:", "DVD"],
-				"fname": ["Film Name:", "300"],
-				"rdate": ["Release Date:", "2009-10-10"],
+				"fname": ["Film Name:", "The Matrix"],
+				"rdate": ["Release Date:", "1999-03-31"],
 				"pview": ["Previously Viewed:", "Yes"],
 				"genre": ["Genre:", "Action"],
 				"range": ["Range:", "10"],
-				"tlink": ["Trailer Link:", "www.300movie.com"],
-				"comments": ["Comments:", "Epic."]
+				"tlink": ["Trailer Link:", "www.thematrixmovie.com"],
+				"comments": ["Comments:", "Always worth re-watching."]
 			},
 			"movie14": {
 				"group": ["Group:", "DVD"],
-				"fname": ["Film Name:", "300"],
-				"rdate": ["Release Date:", "2009-10-10"],
-				"pview": ["Previously Viewed:", "Yes"],
-				"genre": ["Genre:", "Action"],
-				"range": ["Range:", "10"],
-				"tlink": ["Trailer Link:", "www.300movie.com"],
-				"comments": ["Comments:", "Epic."]
+				"fname": ["Film Name:", "The Cove"],
+				"rdate": ["Release Date:", "2009-08-20"],
+				"pview": ["Previously Viewed:", "No"],
+				"genre": ["Genre:", "Documentary"],
+				"range": ["Range:", "05"],
+				"tlink": ["Trailer Link:", "www.thecovemovie.com"],
+				"comments": ["Comments:", "About animal abuse and a threat to human health."]
 			},
 			"movie15": {
 				"group": ["Group:", "DVD"],
-				"fname": ["Film Name:", "300"],
-				"rdate": ["Release Date:", "2009-10-10"],
+				"fname": ["Film Name:", "The Dark Knight"],
+				"rdate": ["Release Date:", "2008-07-18"],
 				"pview": ["Previously Viewed:", "Yes"],
-				"genre": ["Genre:", "Action"],
+				"genre": ["Genre:", "Drama"],
 				"range": ["Range:", "10"],
-				"tlink": ["Trailer Link:", "www.300movie.com"],
-				"comments": ["Comments:", "Epic."]
+				"tlink": ["Trailer Link:", "www.thedarkknightmovie.warnerbros.com"],
+				"comments": ["Comments:", "Incredible movie."]
 			},
 			"movie16": {
 				"group": ["Group:", "DVD"],
-				"fname": ["Film Name:", "300"],
-				"rdate": ["Release Date:", "2009-10-10"],
+				"fname": ["Film Name:", "Up"],
+				"rdate": ["Release Date:", "2009-05-29"],
 				"pview": ["Previously Viewed:", "Yes"],
-				"genre": ["Genre:", "Action"],
+				"genre": ["Genre:", "Comedy"],
 				"range": ["Range:", "10"],
-				"tlink": ["Trailer Link:", "www.300movie.com"],
-				"comments": ["Comments:", "Epic."]
+				"tlink": ["Trailer Link:", "www.upmovie.com"],
+				"comments": ["Comments:", "Great animated, family friendly movie."]
 			},
 			"movie17": {
 				"group": ["Group:", "DVD"],
-				"fname": ["Film Name:", "300"],
-				"rdate": ["Release Date:", "2009-10-10"],
+				"fname": ["Film Name:", "Slumdog Millionaire"],
+				"rdate": ["Release Date:", "2009-01-23"],
 				"pview": ["Previously Viewed:", "Yes"],
-				"genre": ["Genre:", "Action"],
-				"range": ["Range:", "10"],
-				"tlink": ["Trailer Link:", "www.300movie.com"],
-				"comments": ["Comments:", "Epic."]
+				"genre": ["Genre:", "Romance"],
+				"range": ["Range:", "09"],
+				"tlink": ["Trailer Link:", "www.slumdogmillionairemovie.com"],
+				"comments": ["Comments:", "A Mumbai teen from the slums gets a chance to win a million."]
 			},
 			"movie18": {
 				"group": ["Group:", "DVD"],
-				"fname": ["Film Name:", "300"],
-				"rdate": ["Release Date:", "2009-10-10"],
-				"pview": ["Previously Viewed:", "Yes"],
-				"genre": ["Genre:", "Action"],
-				"range": ["Range:", "10"],
-				"tlink": ["Trailer Link:", "www.300movie.com"],
-				"comments": ["Comments:", "Epic."]
+				"fname": ["Film Name:", "Inside Job"],
+				"rdate": ["Release Date:", "2010-02-02"],
+				"pview": ["Previously Viewed:", "No"],
+				"genre": ["Genre:", "Documentary"],
+				"range": ["Range:", "08"],
+				"tlink": ["Trailer Link:", "www.sonyclassics.com/insidejob"],
+				"comments": ["Comments:", "About the financial meltdown of the 21st century."]
 			},
 			"movie19": {
 				"group": ["Group:", "DVD"],
-				"fname": ["Film Name:", "300"],
-				"rdate": ["Release Date:", "2009-10-10"],
-				"pview": ["Previously Viewed:", "Yes"],
-				"genre": ["Genre:", "Action"],
-				"range": ["Range:", "10"],
-				"tlink": ["Trailer Link:", "www.300movie.com"],
-				"comments": ["Comments:", "Epic."]
+				"fname": ["Film Name:", "Pulp Fiction"],
+				"rdate": ["Release Date:", "1994-10-14"],
+				"pview": ["Previously Viewed:", "No"],
+				"genre": ["Genre:", "Thriller"],
+				"range": ["Range:", "08"],
+				"tlink": ["Trailer Link:", "www.pulpfiction.com"],
+				"comments": ["Comments:", "Looks interesting."]
 			},
 			"movie20": {
-				"group": ["Group:", "DVD"],
-				"fname": ["Film Name:", "300"],
-				"rdate": ["Release Date:", "2009-10-10"],
-				"pview": ["Previously Viewed:", "Yes"],
-				"genre": ["Genre:", "Action"],
+				"group": ["Group:", "Theater"],
+				"fname": ["Film Name:", "The Dark Knight Rises"],
+				"rdate": ["Release Date:", "2012-07-20"],
+				"pview": ["Previously Viewed:", "No"],
+				"genre": ["Genre:", "Drama"],
 				"range": ["Range:", "10"],
-				"tlink": ["Trailer Link:", "www.300movie.com"],
-				"comments": ["Comments:", "Epic."]
+				"tlink": ["Trailer Link:", "www.thedarkknightrises.com"],
+				"comments": ["Comments:", "If it's anything like dark knight, its going to be epic!"]
 			}
 		};
 		//Store the JSON OBJECT into local Storage.
