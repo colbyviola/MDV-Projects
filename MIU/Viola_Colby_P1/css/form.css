@@ -12,8 +12,8 @@ Term 1
 body{margin: auto; padding: 5px; background: #B4D8E0}
 #content {width: 480px; height: 690px; overflow: scroll}
 #navcontainer ul { list-style-type: none;}
-
 legend{color: #828282;}
+
 
 a:focus {color: aqua;}
 a:hover {color: aqua;}
