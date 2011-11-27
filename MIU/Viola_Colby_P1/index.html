@@ -6,13 +6,137 @@
 		<meta name="viewport" content="user-scalable=no, width=device-width" />
 		<meta name="HandheldFriendly" content="true" />
 		<meta name="MobileOptimized" content="320" />
-		<link rel="stylesheet" type="text/css" href="css/form.css" media=screen />
+		<style type="text/css">
+		body{
+		background-image:url("http://i52.photobucket.com/albums/g29/anchov13/spotlight.jpg");
+		background-repeat:no-repeat;
+		background-position:center center;
+		background-attachment:fixed;
+		-o-background-size: 100% 100%, auto;
+		-moz-background-size: 100% 100%, auto;
+		-webkit-background-size: 100% 100%, auto;
+		background-size: 100% 100%, auto;
+		}
+		h1{
+		margin: 10px;
+		padding: 5px;
+		width: 50%;
+		text-align: center;
+		color: #FFF;
+		}
+		legend{
+		color: #FFF;
+		width: 180px;
+		padding-left: 15px;
+		padding-bottom: 20px;
+		content: center;
+		font-size: 11px;
+		margin: 0px;
+		}
+		#searchwrapper {
+		width:175px;
+		height:20px;
+		background-image:url(http://i52.photobucket.com/albums/g29/anchov13/Search.png);
+		background-repeat:no-repeat;
+		padding:10px;
+		margin:15px;
+		position:relative;
+		}
+		#searchwrapper form { display:inline ;}
+		.searchbox {
+		border:0px;
+		background-color:transparent;
+		position:absolute;
+		top:-2px;
+		left:9px;
+		width:175px;
+		height:20px;
+		}
+		.searchbox_submit {
+		border:0px;
+		background-color:transparent;
+		position:absolute;
+		top:2px;
+		left:140px;
+		width:45px;
+		height:30px;
+		}
+		input.addmovie {
+    	background-image: url(http://i52.photobucket.com/albums/g29/anchov13/newmovieicon-1.png);
+   		background-color: transparent;
+   	 	background-repeat: no-repeat;
+   		border: none;
+   		cursor: pointer;
+   		height: 100px;
+  		padding-left: 100px;
+   		vertical-align: middle;
+   		color: #FFF;
+   		font-size: 14px;
+   		margin: -15px;
+   		margin-top: -25px;
+   		}
+   		input.movielist {
+    	background-image: url(http://i52.photobucket.com/albums/g29/anchov13/mymoviesicon-1.png);
+   		background-color: transparent;
+   	 	background-repeat: no-repeat;
+   		border: none;
+   		cursor: pointer;
+   		height: 100px;
+   		padding-left: 100px;
+   		vertical-align: middle;
+   		color: #FFF;
+   		font-size: 14px;
+   		margin: -15px;
+   		margin-top: -45px;
+   		}
+   		input.helpme {
+    	background-image: url(http://i52.photobucket.com/albums/g29/anchov13/helpicon-1.png);
+   		background-color: transparent;
+   	 	background-repeat: no-repeat;
+   		border: none;
+   		cursor: pointer;
+   		height: 100px;
+  		padding-left: 100px;
+   		vertical-align: middle;
+   		color: #FFF;
+   		font-size: 14px;
+   		margin: -15px;
+   		margin-top: -45px;
+   		}
+		</style>
 	</head>
 	<body>
-		<h1>Film's Finest</h1>
-		<p>With so many movies being released, this tool helps you keep track of which ones are worth watching.</p>
-		<form method="link" action="additem.html">
-			<input type="submit" value ="Get Started">
+		<h1>Movies On</h1>
+		<legend>With so many movies being released, this tool helps you keep track of which ones are worth watching.</legend>
+		<form>
+			<div id="searchwrapper">
+				<form action="#">
+					<input type="text" class="searchbox" name="s" placeholder="Movie Title" /><!--Link to localstorage--!>
+					<input type="image" src="http://i52.photobucket.com/albums/g29/anchov13/Blank.png" class="searchbox_submit" value="" />
+				</form>
+			</div>
+			<div>
+				<form action="#"> <!--Link to localstorage--!>
+					<select name="browse">
+						<option value="comedy">Comedy</option>
+						<option value="drama">Drama</option>
+						<option value="action">Action</option>
+						<option value="thriller">Thriller</option>
+						<option value="romance">Romance</option>
+						<option value="horror">Horror</option>
+						<option value="documentary">Documentary</option>
+					</select>
+				</form>
+			<br><form method="link" action="additem.html">
+					<input type="submit" value ="New Movie" class ="addmovie">
+				</form>
+			<br><form method="link" action="Localstorage"> <!--Link to localstorage--!>
+					<input type="submit" value ="Movie List" class ="movielist">
+				</form>
+			<br><form method="link" action="help.html">
+					<input type="submit" value ="Help" class="helpme">
+				</form>
+			</div>
 		</form>
 	</body>
 </html>
