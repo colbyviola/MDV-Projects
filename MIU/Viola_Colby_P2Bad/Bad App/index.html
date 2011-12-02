@@ -1,0 +1,709 @@
+<!doctype html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Mobile Site Template copy</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+
+	<div data-role="page" id="home">
+		
+		<div data-role="header" data-position="fixed">
+			<h1>Movies On</h1>
+		</div>
+		<div data-role="content">
+			<p>Home page!</p>
+			<p><a href="#movielist" data-role="button" data-icon="arrow-r" data-iconpos="right">Movie List</a></p>
+			<p><a href="#movieFieldset" data-role="button" data-icon="arrow-r" data-iconpos="right">Add a Movie</a></p>	
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-icon="home">Home</a></li>
+				</ul>
+			</div> 
+		</div>
+	</div>
+																					<!--NEW PAGE-->																			
+	<div data-role="page" id="movielist" data-add-back-btn="true">
+		
+		<div data-role="header" data-position="fixed">
+			<h1>Movies List</h1>
+		</div>
+		<div data-role="content">
+		<ul data-role="listview" data-filter="true">
+		<li data-role="list-divider">Venues</li>
+			<li><a href="#dvd">
+				<h3>DVD</h3>
+				<p>Who needs a theater anyway...</p>
+				<span class="ui-li-count">15</span>
+			</a></li>
+			<li><a href="#theater">
+				<h3>Theater</h3>
+				<p>Big screen is way better!</p>
+				<span class="ui-li-count">4</span>
+			</a></li>
+			<li><a href="#unknown">
+				<h3>Unknown</h3>
+				<p>Brain fail</p>
+				<span class="ui-li-count">1</span>
+			</a></li>
+		
+		<li data-role="list-divider">Genres</li>
+			<li><a href="#action">
+				<h3>Action</h3>
+				<p>The Conflict</p>
+				<span class="ui-li-count">3</span>
+			</a></li>
+			<li><a href="#comedy">
+				<h3>Comedy</h3>
+				<p>The Funny</p>
+				<span class="ui-li-count">3</span>
+			</a></li>
+			<li><a href="#documentary">
+				<h3>Documentary</h3>
+				<p>The Informational</p>
+				<span class="ui-li-count">3</span>
+			</a></li>
+			<li><a href="#drama">
+				<h3>Drama</h3>
+				<p>The Dramatic</p>
+				<span class="ui-li-count">4</span>
+			</a></li>
+			<li><a href="#horror">
+				<h3>Horror</h3>
+				<p>The Scary</p>
+				<span class="ui-li-count">1</span>
+			</a></li>
+			<li><a href="#romance">
+				<h3>Romance</h3>
+				<p>The Love</p>
+				<span class="ui-li-count">3</span>
+			</a></li>
+			<li><a href="#thriller">
+				<h3>Thriller</h3>
+				<p>The Nail-Biter</p>
+				<span class="ui-li-count">3</span>
+			</a></li>
+		</ul>
+		</div>
+		
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-icon="home">Home</a></li>
+				</ul>
+			</div> 
+		</div>
+	</div>
+																					<!--NEW PAGE-->
+	<div data-role="page" id="dvd" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>DVD</h1>
+		</div>
+		<div data-role="content">
+			<div data-role="collapsible-set">
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
+					<h3>300</h3>
+					<p>Release Datae: 2009-10-10</p>
+					<p>Previously Viewed: Yes<p>
+					<p>Genre: Action</p>
+					<p>www.300movie.com</p>
+					<p>"Epic"</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>The Cove</h3>
+					<p>Release Date: 2009-08-20</p>
+					<p>Previously Viewed: No<p>
+					<p>Genre: Documentary</p>
+					<p>Range: 05</p>
+					<p>www.thecovemovie.com</p>
+					<p>"About animal abuse and a threat to human health."</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
+					<h3>The Dark Knight</h3>
+					<p>Release Date: 2008-07-18</p>
+					<p>Previously Viewed: Yes<p>
+					<p>Genre: Drama</p>
+					<p>Range: 10</p>
+					<p>www.thedarkknightmovie.warnerbros.com</p>
+					<p>"Incredible movie."</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>Food Inc</h3>
+					<p>Release Date: 2008-06-04</p>
+					<p>Previously Viewed: No<p>
+					<p>Genre: Documentary</p>
+					<p>Range: 08</p>
+					<p>www.foodincmovie.com</p>
+					<p>"An interesting look at the food industry."</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
+					<h3>Forrest Gump</h3>
+					<p>Release Date: 1994-07-06</p>
+					<p>Previously Viewed: Yes<p>
+					<p>Genre: Comedy</p>
+					<p>Range: 10</p>
+					<p>www.imdb.com</p>
+					<p>"Who doesn't like Forrest Gump!?"</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>The Godfather</h3>
+					<p>Release Date: 1972-03-24</p>
+					<p>Previously Viewed: No<p>
+					<p>Genre: Drama</p>
+					<p>Range: 10</p>
+					<p>www.thegodfather.com<p>
+					<p>"Have yet to see how great it is."</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
+					<h3>Inception</h3>
+					<p>Release Date: 2010-07-16</p>
+					<p>Previously Viewed: Yes<p>
+					<p>Genre: Thriller</p>
+					<p>Range: 10</p>
+					<p>www.inceptionmovie.com</p>
+					<p>"Mind bending."</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>Inside Job</h3>
+					<p>Release Date: 2010-02-02</p>
+					<p>Previously Viewed: No<p>
+					<p>Genre: Documentary</p>
+					<p>Range: 08</p>
+					<p>www.sonyclassics.com/insidejob</p>
+					<p>"About the financial meltdown of the 21st century."</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
+					<h3>Life Is Beautiful</h3>
+					<p>Release Date: 1998-10-23</p>
+					<p>Previously Viewed: No<p>
+					<p>Genre: Romance</p>
+					<p>Range: 07</p>
+					<p>www.imdb.com</p>
+					<p>"An Italian romance about a Jewish man during Hitler's takeover."</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>The Matrix</h3>
+					<p>Release Date: 1999-03-31</p>
+					<p>Previously Viewed: Yes<p>
+					<p>Genre: Action</p>
+					<p>Range: 10</p>
+					<p>www.thematrixmovie.com</p>
+					<p>"Always worth re-watching."</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
+					<h3>Pulp Fiction</h3>
+					<p>Release Date: 1994-10-14</p>
+					<p>Previously Viewed: No<p>
+					<p>Genre: Thriller</p>
+					<p>Range: 08</p>
+					<p>www.pulpfiction.com</p>
+					<p>"Looks interesting."</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>The Shawshank Redemption</h3>
+					<p>Release Date: 1994-08-23</p>
+					<p>Previously Viewed: Yes<p>
+					<p>Genre: Drama</p>
+					<p>Range: 10</p>
+					<p>www.shawshankredemption.com</p>
+					<p>""Number 1 Drama!"</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
+					<h3>Slumdog Millionaire</h3>
+					<p>Release Date: 2009-01-23</p>
+					<p>Previously Viewed: Yes<p>
+					<p>Genre: Romance</p>
+					<p>Range: 09</p>
+					<p>www.slumdogmillionairemovie.com</p>
+					<p>"A Mumbai teen from the slums gets a chance to win a million."</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>Up</h3>
+					<p>Release Date: 2009-05-29</p>
+					<p>Previously Viewed: Yes<p>
+					<p>Genre: Comedy</p>
+					<p>Range: 10</p>
+					<p>www.upmovie.com</p>
+					<p>"Great animated, family friendly movie."</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
+					<h3>WALL-E</h3>
+					<p>Release Date: 2008-06-27</p>
+					<p>Previously Viewed: Yes<p>
+					<p>Genre: Romance</p>
+					<p>Range: 10</p>
+					<p>www.wallemovie.com</p>
+					<p>"Amazing Pixar animation."</p>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-icon="home">Home</a></li>
+				</ul>
+			</div> 
+		</div> 
+	</div>
+																					<!--NEW PAGE-->
+	<div data-role="page" id="theater" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Theaters</h1>
+		</div>
+		<div data-role="content">
+			<div data-role="collapsible-set">
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
+					<h3>Carnage</h3>
+					<p>Release Date: 2011-12-16</p>
+					<p>Previously Viewed: No<p>
+					<p>Genre: Comedy</p>
+					<p>Range: 06</p>
+					<p>www.carnagemovie.com</p>
+					<p>"John Reilly is a little iffy."</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>The Dark Knight Rises</h3>
+					<p>Release Date: 2012-07-20</p>
+					<p>Previously Viewed: No<p>
+					<p>Genre: Drama</p>
+					<p>Range: 10</p>
+					<p>www.thedarkknightrises.com</p>
+					<p>"If it's anything like dark knight, its going to be epic!"</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
+					<h3>The Innkeepers</h3>
+					<p>Release Date: 2012-02-03</p>
+					<p>Previously Viewed: No<p>
+					<p>Genre: Thriller</p>
+					<p>Range: 04</p>
+					<p>www.Theinnkeepersmovie.com</p>
+					<p>"Looks a little lame."</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>Immortals</h3>
+					<p>Release Date: 2011-11-11</p>
+					<p>Previously Viewed: No<p>
+					<p>Genre: Action</p>
+					<p>Range: 07</p>
+					<p>www.immortalsmovie.com</p>
+					<p>"Probably not going to be the next 300."</p>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-icon="home">Home</a></li>
+				</ul>
+			</div> 
+		</div>
+	</div>																	
+																					<!--NEW PAGE-->
+	<div data-role="page" id="unknown" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Unknown</h1>
+		</div>
+		<div data-role="content">
+			<div data-role="collapsible-set">
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
+					<h3>Tucker and Dale vs Evil</h3>
+					<p>Release Date: 2011-08-30</p>
+					<p>Previously Viewed: No<p>
+					<p>Genre: Horror</p>
+					<p>Range: 09</p>
+					<p>www.tuckeranddale.com</p>
+					<p>"Looks like the funniest horror ever made."</p>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-icon="home">Home</a></li>
+				</ul>
+			</div> 
+		</div>
+	</div>
+																					<!--NEW PAGE-->
+	<div data-role="page" id="action" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Action</h1>
+		</div>
+		<div data-role="content">
+			<div data-role="collapsible-set">
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
+					<h3>300</h3>
+					<p>Release Datae: 2009-10-10</p>
+					<p>Previously Viewed: Yes<p>
+					<p>Genre: Action</p>
+					<p>www.300movie.com</p>
+					<p>"Epic"</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>Immortals</h3>
+					<p>Release Date: 2011-11-11</p>
+					<p>Previously Viewed: No<p>
+					<p>Genre: Action</p>
+					<p>Range: 07</p>
+					<p>www.immortalsmovie.com</p>
+					<p>"Probably not going to be the next 300."</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
+					<h3>The Matrix</h3>
+					<p>Release Date: 1999-03-31</p>
+					<p>Previously Viewed: Yes<p>
+					<p>Genre: Action</p>
+					<p>Range: 10</p>
+					<p>www.thematrixmovie.com</p>
+					<p>"Always worth re-watching."</p>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-icon="home">Home</a></li>
+				</ul>
+			</div> 
+		</div>
+	</div>
+																					<!--NEW PAGE-->
+	<div data-role="page" id="comedy" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Comedy</h1>
+		</div>
+		<div data-role="content">
+			<div data-role="collapsible-set">
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
+					<h3>Carnage</h3>
+					<p>Release Date: 2011-12-16</p>
+					<p>Previously Viewed: No<p>
+					<p>Genre: Comedy</p>
+					<p>Range: 06</p>
+					<p>www.carnagemovie.com</p>
+					<p>"John Reilly is a little iffy."</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>Forrest Gump</h3>
+					<p>Release Date: 1994-07-06</p>
+					<p>Previously Viewed: Yes<p>
+					<p>Genre: Comedy</p>
+					<p>Range: 10</p>
+					<p>www.imdb.com</p>
+					<p>"Who doesn't like Forrest Gump!?"</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
+					<h3>Up</h3>
+					<p>Release Date: 2009-05-29</p>
+					<p>Previously Viewed: Yes<p>
+					<p>Genre: Comedy</p>
+					<p>Range: 10</p>
+					<p>www.upmovie.com</p>
+					<p>"Great animated, family friendly movie."</p>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-icon="home">Home</a></li>
+				</ul>
+			</div> 
+		</div>
+	</div>
+																					<!--NEW PAGE-->
+	<div data-role="page" id="documentary" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Documentary</h1>
+		</div>
+		<div data-role="content">
+			<div data-role="collapsible-set">
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
+					<h3>The Cove</h3>
+					<p>Release Date: 2009-08-20</p>
+					<p>Previously Viewed: No<p>
+					<p>Genre: Documentary</p>
+					<p>Range: 05</p>
+					<p>www.thecovemovie.com</p>
+					<p>"About animal abuse and a threat to human health."</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>Food Inc</h3>
+					<p>Release Date: 2008-06-04</p>
+					<p>Previously Viewed: No<p>
+					<p>Genre: Documentary</p>
+					<p>Range: 08</p>
+					<p>www.foodincmovie.com</p>
+					<p>"An interesting look at the food industry."</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
+					<h3>Inside Job</h3>
+					<p>Release Date: 2010-02-02</p>
+					<p>Previously Viewed: No<p>
+					<p>Genre: Documentary</p>
+					<p>Range: 08</p>
+					<p>www.sonyclassics.com/insidejob</p>
+					<p>"About the financial meltdown of the 21st century."</p>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-icon="home">Home</a></li>
+				</ul>
+			</div> 
+		</div>
+	</div>
+																					<!--NEW PAGE-->
+	<div data-role="page" id="drama" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Drama</h1>
+		</div>
+		<div data-role="content">
+			<div data-role="collapsible-set">
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
+					<h3>The Dark Knight</h3>
+					<p>Release Date: 2008-07-18</p>
+					<p>Previously Viewed: Yes<p>
+					<p>Genre: Drama</p>
+					<p>Range: 10</p>
+					<p>www.thedarkknightmovie.warnerbros.com</p>
+					<p>"Incredible movie."</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>The Dark Knight Rises</h3>
+					<p>Release Date: 2012-07-20</p>
+					<p>Previously Viewed: No<p>
+					<p>Genre: Drama</p>
+					<p>Range: 10</p>
+					<p>www.thedarkknightrises.com</p>
+					<p>"If it's anything like dark knight, its going to be epic!"</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
+					<h3>The Godfather</h3>
+					<p>Release Date: 1972-03-24</p>
+					<p>Previously Viewed: No<p>
+					<p>Genre: Drama</p>
+					<p>Range: 10</p>
+					<p>www.thegodfather.com<p>
+					<p>"Have yet to see how great it is."</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>The Shawshank Redemption</h3>
+					<p>Release Date: 1994-08-23</p>
+					<p>Previously Viewed: Yes<p>
+					<p>Genre: Drama</p>
+					<p>Range: 10</p>
+					<p>www.shawshankredemption.com</p>
+					<p>""Number 1 Drama!"</p>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-icon="home">Home</a></li>
+				</ul>
+			</div> 
+		</div>
+	</div>
+																					<!--NEW PAGE-->
+	<div data-role="page" id="horror" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Horror</h1>
+		</div>
+		<div data-role="content">
+			<div data-role="collapsible-set">
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
+					<h3>Tucker and Dale vs Evil</h3>
+					<p>Release Date: 2011-08-30</p>
+					<p>Previously Viewed: No<p>
+					<p>Genre: Horror</p>
+					<p>Range: 09</p>
+					<p>www.tuckeranddale.com</p>
+					<p>"Looks like the funniest horror ever made."</p>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-icon="home">Home</a></li>
+				</ul>
+			</div> 
+		</div>
+	</div>
+																					<!--NEW PAGE-->
+	<div data-role="page" id="romance" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Romance</h1>
+		</div>																		
+		<div data-role="content">
+			<div data-role="collapsible-set">
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
+					<h3>Life Is Beautiful</h3>
+					<p>Release Date: 1998-10-23</p>
+					<p>Previously Viewed: No<p>
+					<p>Genre: Romance</p>
+					<p>Range: 07</p>
+					<p>www.imdb.com</p>
+					<p>"An Italian romance about a Jewish man during Hitler's takeover."</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>Slumdog Millionaire</h3>
+					<p>Release Date: 2009-01-23</p>
+					<p>Previously Viewed: Yes<p>
+					<p>Genre: Romance</p>
+					<p>Range: 09</p>
+					<p>www.slumdogmillionairemovie.com</p>
+					<p>"A Mumbai teen from the slums gets a chance to win a million."</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
+					<h3>WALL-E</h3>
+					<p>Release Date: 2008-06-27</p>
+					<p>Previously Viewed: Yes<p>
+					<p>Genre: Romance</p>
+					<p>Range: 10</p>
+					<p>www.wallemovie.com</p>
+					<p>"Amazing Pixar animation."</p>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-icon="home">Home</a></li>
+				</ul>
+			</div> 
+		</div>
+	</div>
+																					<!--NEW PAGE-->
+	<div data-role="page" id="thriller" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Thriller</h1>
+		</div>
+		<div data-role="content">
+			<div data-role="collapsible-set">
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
+					<h3>Inception</h3>
+					<p>Release Date: 2010-07-16</p>
+					<p>Previously Viewed: Yes<p>
+					<p>Genre: Thriller</p>
+					<p>Range: 10</p>
+					<p>www.inceptionmovie.com</p>
+					<p>"Mind bending."</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>The Innkeepers</h3>
+					<p>Release Date: 2012-02-03</p>
+					<p>Previously Viewed: No<p>
+					<p>Genre: Thriller</p>
+					<p>Range: 04</p>
+					<p>www.Theinnkeepersmovie.com</p>
+					<p>"Looks a little lame."</p>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
+					<h3>Pulp Fiction</h3>
+					<p>Release Date: 1994-10-14</p>
+					<p>Previously Viewed: No<p>
+					<p>Genre: Thriller</p>
+					<p>Range: 08</p>
+					<p>www.pulpfiction.com</p>
+					<p>"Looks interesting."</p>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-icon="home">Home</a></li>
+				</ul>
+			</div> 
+		</div>
+	</div>
+																					<!--NEW PAGE-->
+	<div data-role="page" id="movieFieldset" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Movies On</h1>
+		</div>
+		
+	<nav>
+			<a href="#" id="clear">Clear Stored Data</a>
+			<a href="#" id="displayLink">Display Data</a>
+			<a href="additem.html" id="addNew" style="display:none;">Add New Item</a>
+		</nav>
+		<form action="#" method="post" id="movieForm">
+			<fieldset id="movieFieldset">
+				<legend>What Movie Was It?:</legend>
+				<span>* fields are required.</span>
+				<div id="navcontainer">
+				<ul id="errors"></ul>
+				<ul id="questions">
+					<li id="select"><label for "group">*Add to Group:</label><br /></li>
+					<li><label for="fname">*Film Name:</label><input type ="text" id="fname" /></li>
+					<li><label for="rdate">Release Date:</label><input type="date" min="1900-01-01" max="2020-01-01" id="rdate" name="rdate" required aria-required="false" placeholder="2008-07-04" /></li>
+					<li><input type="checkbox" id="pview" value="Yes" class="checkbox" /><label for="pview"> Previously Viewed?</label></li>
+					<li><label for="genre">Main Genre Type: </label>
+						<ul class="checkbox"><div id="navcontainer">
+							<li><input type="radio" checked value="Comedy" id="comedy" name="genre" /><label for="comedy">Comedy</label></li>
+							<li><input type="radio" value="Drama" id="drama" name="genre" /><label for="drama">Drama</label></li>
+							<li><input type="radio" value="Action" id="action" name="genre" /><label for="action">Action</label></li>
+							<li><input type="radio" value="Thriller" id="thriller" name="genre" /><label for="thriller">Thriller</label></li>
+							<li><input type="radio" value="Romance" id="romance" name="genre" /><label for="romance">Romance</label></li>
+							<li><input type="radio" value="Horror" id="horror" name="genre" /><label for="horror">Horror</label></li>
+							<li><input type="radio" value="Documentary" id="documentary" name="genre" /><label for="documentary">Documentary</label></li>
+						</ul>
+					</li>
+					<li><label for="tlink">Trailer Link:</label><input type ="url" id="tlink" placeholder="www.awesometrailer.com" /></li>
+					<li><label for="rating">On a scale from 1 to 10, how good does this movie look:</label><input type="range" min="1" max ="10" id="range"/></li>
+					<li><label for="comments">Additional comments:</label><textarea id="comments"></textarea></li>
+				</ul>
+				</div>
+			</fieldset>
+			<input type="submit" value="Submit" id="submit" /><br />
+		</form>
+	</div>
+	
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
+<!--if json is seperate
+call json.js
+then call main.js
+then jqm -->
