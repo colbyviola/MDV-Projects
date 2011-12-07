@@ -31,7 +31,7 @@
 		</div>
 		<div data-role="content">
 			<p><a href="#movielist" data-role="button" data-icon="arrow-r" data-iconpos="right">Movie List</a></p>
-			<p><a href="#moviefieldset" data-role="button" data-icon="arrow-r" data-iconpos="right">Add a Movie</a></p>	
+			<p><a href="#addmovie" data-role="button" data-icon="arrow-r" data-iconpos="right">Add a Movie</a></p>	
 		</div>
 		<div data-role="footer" data-position="fixed">
 			<div data-role="navbar">
@@ -693,17 +693,19 @@
 	</div>
 																					<!--NEW PAGE-->
 
-	<div data-role="page" id="moviefieldset" data-add-back-btn="true">
+	<div data-role="page" id="addmovie" data-add-back-btn="true">
 		
 		<div data-role="header" data-position="fixed">
 			<h1>Add a Movie</h1>
 		</div>
 		
-		<form action="" method="post" id="movieform">
+		<div data-role="content">
+		
+		<form action="" method="post" id="addmovieform">
 			
 			<div data-role="fieldcontain">
 				<label for="moviegroup">Movie Group</label>
-				<select name="moviegroup" id="moviegroup" data-native-menu="false">
+				<select name="moviegroup" id="moviegroup" data-native-menu="false" class ="required">
 					<option value="DVD">DVD</option>
 					<option value="Theater">Theater</option>
 					<option value="Unknown">Unknown</option>
@@ -746,6 +748,7 @@
 					<input type="radio" value="Documentary" name="genre" id="genre-7" />
 					<label for="genre-7">Documentary</label>
 				</fieldset>
+			</div>
 			
 			<div data-role="fieldcontain">
 				<label for="tlink">Trailer Link:</label>
@@ -767,15 +770,17 @@
 				<input type="reset" value="Reset" data-theme="a" />
 			</div>
 			
-			<div data-role="footer" data-position="fixed">
+		</form>
+		</div>
+		
+		<div data-role="footer" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="index.html" data-icon="home">Home</a></li>
 				</ul>
 			</div> 
-			
-		</form>
-			
+		</div>
+	
 	</div>
 			
 	<!-- JavaScript under here -->
