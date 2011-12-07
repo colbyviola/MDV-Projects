@@ -30,9 +30,8 @@
 			<h1>Movies On</h1>
 		</div>
 		<div data-role="content">
-			<p>Home page!</p>
 			<p><a href="#movielist" data-role="button" data-icon="arrow-r" data-iconpos="right">Movie List</a></p>
-			<p><a href="#movieFieldset" data-role="button" data-icon="arrow-r" data-iconpos="right">Add a Movie</a></p>	
+			<p><a href="#moviefieldset" data-role="button" data-icon="arrow-r" data-iconpos="right">Add a Movie</a></p>	
 		</div>
 		<div data-role="footer" data-position="fixed">
 			<div data-role="navbar">
@@ -694,10 +693,11 @@
 	</div>
 																					<!--NEW PAGE-->
 
-					<li><label for="rating">On a scale from 1 to 10, how good does this movie look:</label><input type="range" min="1" max ="10" id="range"/></li>
-					<li><label for="comments">Additional comments:</label><textarea id="comments"></textarea></li>
-	
-	<div data-role="content">
+	<div data-role="page" id="moviefieldset" data-add-back-btn="true">
+		
+		<div data-role="header" data-position="fixed">
+			<h1>Add a Movie</h1>
+		</div>
 		
 		<form action="" method="post" id="movieform">
 			
@@ -756,6 +756,23 @@
 				<label for="rating">How interested are you in this movie?</label>
 				<input type="range" name="rating" id="rating" value="5" min="0" max="10" />
 			</div>
+			
+			<div data-role="fieldcontain">
+				<label for="comments">Comments:</label>
+				<textarea></textarea>
+			</div>
+			
+			<div data-role="fieldcontain">
+				<input type="submit" value="Submit" data-theme="b" />
+				<input type="reset" value="Reset" data-theme="a" />
+			</div>
+			
+			<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-icon="home">Home</a></li>
+				</ul>
+			</div> 
 			
 		</form>
 			
