@@ -3,7 +3,6 @@
 <head>
 
 	<meta charset="utf-8">
-
 	
 	<title>Movies On</title>
 	
@@ -18,13 +17,9 @@
 	<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.css" />
 	<link rel="stylesheet" href="css/form.css" />
-	<link rel="stylesheet" href="flexslider.css" type="text/css">
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-	<script src="jquery.flexslider.js"></script>
-	
 
 </head>
 <body>
@@ -134,10 +129,9 @@
 		<div data-role="header" data-position="fixed">
 			<h1>DVD</h1>
 		</div>
-		
-		<div class="flexslider">
-			<ul class="slides">
-				<li>
+		<div data-role="content">
+			<div data-role="collapsible-set">
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
 					<img src="images/300.jpg" />
 					<h3>300</h3>
 					<p>Release Datae: 2009-10-10</p>
@@ -145,8 +139,8 @@
 					<p>Genre: Action</p>
 					<p>www.300movie.com</p>
 					<p>"Epic"</p>
-				</li>
-				<li>
+				</div>
+				<div data-role="collapsible" data-collapsed="true">
 					<img src="images/cove.jpg" />
 					<h3>The Cove</h3>
 					<p>Release Date: 2009-08-20</p>
@@ -155,8 +149,8 @@
 					<p>Range: 05</p>
 					<p>www.thecovemovie.com</p>
 					<p>"About animal abuse and a threat to human health."</p>
-				</li>
-				<li>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
 					<img src="images/darkknight.jpg" />
 					<h3>The Dark Knight</h3>
 					<p>Release Date: 2008-07-18</p>
@@ -165,8 +159,8 @@
 					<p>Range: 10</p>
 					<p>www.thedarkknightmovie.warnerbros.com</p>
 					<p>"Incredible movie."</p>
-				</li>
-				<li>
+				</div>
+				<div data-role="collapsible" data-collapsed="true">
 					<img src="images/food.jpg" />
 					<h3>Food Inc</h3>
 					<p>Release Date: 2008-06-04</p>
@@ -175,8 +169,8 @@
 					<p>Range: 08</p>
 					<p>www.foodincmovie.com</p>
 					<p>"An interesting look at the food industry."</p>
-				</li>
-				<li>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
 					<img src="images/forrestgump.jpg" />
 					<h3>Forrest Gump</h3>
 					<p>Release Date: 1994-07-06</p>
@@ -185,8 +179,8 @@
 					<p>Range: 10</p>
 					<p>www.imdb.com</p>
 					<p>"Who doesn't like Forrest Gump!?"</p>
-				</li>
-				<li>
+				</div>
+				<div data-role="collapsible" data-collapsed="true">
 					<img src="images/godfather.jpg" />
 					<h3>The Godfather</h3>
 					<p>Release Date: 1972-03-24</p>
@@ -195,8 +189,8 @@
 					<p>Range: 10</p>
 					<p>www.thegodfather.com<p>
 					<p>"Have yet to see how great it is."</p>
-				</li>
-				<li>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
 					<img src="images/inception.jpg" />
 					<h3>Inception</h3>
 					<p>Release Date: 2010-07-16</p>
@@ -205,8 +199,8 @@
 					<p>Range: 10</p>
 					<p>www.inceptionmovie.com</p>
 					<p>"Mind bending."</p>
-				</li>
-				<li>
+				</div>
+				<div data-role="collapsible" data-collapsed="true">
 					<img src="images/insidejob.jpg" />
 					<h3>Inside Job</h3>
 					<p>Release Date: 2010-02-02</p>
@@ -215,8 +209,8 @@
 					<p>Range: 08</p>
 					<p>www.sonyclassics.com/insidejob</p>
 					<p>"About the financial meltdown of the 21st century."</p>
-				</li>
-				<li>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
 					<img src="images/lifeisbeautiful.jpg" />
 					<h3>Life Is Beautiful</h3>
 					<p>Release Date: 1998-10-23</p>
@@ -226,8 +220,7 @@
 					<p>www.imdb.com</p>
 					<p>"An Italian romance about a Jewish man during Hitler's takeover."</p>
 				</div>
-				</li>
-				<li>
+				<div data-role="collapsible" data-collapsed="true">
 					<img src="images/matrix.jpg" />
 					<h3>The Matrix</h3>
 					<p>Release Date: 1999-03-31</p>
@@ -237,8 +230,7 @@
 					<p>www.thematrixmovie.com</p>
 					<p>"Always worth re-watching."</p>
 				</div>
-				</li>
-				<li>
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
 					<img src="images/pulp.jpg" />
 					<h3>Pulp Fiction</h3>
 					<p>Release Date: 1994-10-14</p>
@@ -248,8 +240,7 @@
 					<p>www.pulpfiction.com</p>
 					<p>"Looks interesting."</p>
 				</div>
-				</li>
-				<li>
+				<div data-role="collapsible" data-collapsed="true">
 					<img src="images/shawshank.png" />
 					<h3>The Shawshank Redemption</h3>
 					<p>Release Date: 1994-08-23</p>
@@ -258,8 +249,8 @@
 					<p>Range: 10</p>
 					<p>www.shawshankredemption.com</p>
 					<p>""Number 1 Drama!"</p>
-				</li>
-				<li>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
 					<img src="images/slumbdog.jpg" />
 					<h3>Slumdog Millionaire</h3>
 					<p>Release Date: 2009-01-23</p>
@@ -269,8 +260,7 @@
 					<p>www.slumdogmillionairemovie.com</p>
 					<p>"A Mumbai teen from the slums gets a chance to win a million."</p>
 				</div>
-				</li>
-				<li>
+				<div data-role="collapsible" data-collapsed="true">
 					<img src="images/up.jpg" />
 					<h3>Up</h3>
 					<p>Release Date: 2009-05-29</p>
@@ -279,8 +269,8 @@
 					<p>Range: 10</p>
 					<p>www.upmovie.com</p>
 					<p>"Great animated, family friendly movie."</p>
-				</li>
-				<li>
+				</div>
+				<div data-role="collapsible" data-collapsed="true" data-theme="d">
 					<img src="images/walle.jpg" />
 					<h3>WALL-E</h3>
 					<p>Release Date: 2008-06-27</p>
@@ -289,7 +279,8 @@
 					<p>Range: 10</p>
 					<p>www.wallemovie.com</p>
 					<p>"Amazing Pixar animation."</p>
-				</li>
+				</div>
+			</div>
 		</div>
 		<div data-role="footer" data-position="fixed">
 			<div data-role="navbar">
