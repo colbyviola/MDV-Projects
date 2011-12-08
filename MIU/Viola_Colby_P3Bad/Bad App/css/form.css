@@ -2,44 +2,15 @@
 
 Title: form.html Styles
 By: Colby Viola
-For: CSS Selectors
-VFW Project 4
-Term 1
+Colby Viola
+MIU Project 3
 
 */
-*{font-family: "Times New Roman"; font-size: 14px; font-variant: small-caps}
-
-body{margin: auto; padding: 5px; background: #B4D8E0}
-#content {width: 480px; height: 690px; overflow: scroll}
-#navcontainer ul { list-style-type: none;}
-legend{color: #828282;}
-
-
-a:focus {color: aqua;}
-a:hover {color: aqua;}
-a:active {color: red;}
-
-h1{
-	margin: 10px;
-	border: 1px solid black;
-	padding: 5px;
-	background: #7CB3FC;
-	width: 50%;
-	text-align: center
+.ui-grid-b img {
+    width  : 100%;
+    height : auto;
 }
 
-p{text-align: ltr}
+label.error{display:block; margin: 10px 0;}
 
-fieldset{
-	background: #ABCAEE;
-	font-family: "Times New Roman", Times, serif;
-	direction: ltr;
-	margin: 10px;
-}
-
-span{
-	font-size: 11px;
-	color: #E80707;
-	font-style: italic;
-	padding: 5px
-}
+#movielist{font-size: 30px;}
