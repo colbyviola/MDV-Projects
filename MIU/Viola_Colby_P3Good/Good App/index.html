@@ -30,7 +30,7 @@
 			<h1>Movies On</h1>
 		</div>
 		<div data-role="content">
-			<p><a href="#movielist" data-role="button" data-icon="arrow-r" data-iconpos="right">Movie List</a></p>
+			<p><a href="#movielist" data-role="button" data-icon="arrow-r" data-iconpos="right">Browse Movies</a></p>
 			<p><a href="#addmovie" data-role="button" data-icon="arrow-r" data-iconpos="right">Add a Movie</a></p>	
 		</div>
 		<div data-role="footer" data-position="fixed">
@@ -723,13 +723,13 @@
 			</div>
 		
 			<div data-role="fieldcontain">
-				<label for="fname">Film Name</label>
+				<label for="fname">Film Title</label>
 				<input type="text" name="fname" id="fname" class ="required" />
 			</div>
 			
 			<div data-role="fieldcontain">
 				<label for="rdate">Release Date</label>
-				<input type="date" name="rdate" id="rdate" />
+				<input type="text" name="rdate" id="rdate" value="2011/01/25" />
 			</div>
 			
 			<div data-role="fieldcontain">
@@ -762,7 +762,7 @@
 			
 			<div data-role="fieldcontain">
 				<label for="tlink">Trailer Link</label>
-				<input type="text" name="tlink" id="tlink" />
+				<input type="url" name="tlink" id="tlink" value="http://www." />
 			</div>
 			
 			<div data-role="fieldcontain">
