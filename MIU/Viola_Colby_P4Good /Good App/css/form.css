@@ -1,0 +1,20 @@
+/*
+By: Colby Viola
+MIU Project 3
+
+*/
+
+#home{background-image:url("http://i52.photobucket.com/albums/g29/anchov13/spotlight.jpg");
+    	background-repeat:no-repeat;
+        background-position:center center;
+        background-attachment:fixed;
+        -o-background-size: 100% 100%, auto;
+        -moz-background-size: 100% 100%, auto;
+        -webkit-background-size: 100% 100%, auto;
+        background-size: 100% 100%, auto;
+}
+
+label.error{display:block; margin: 10px 0; color:#cc0000;}
+
+#amerrorslink{display:none;}
+
