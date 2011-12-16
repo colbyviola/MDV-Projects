@@ -13,6 +13,7 @@ MIU Project 4
         -webkit-background-size: 100% 100%, auto;
         background-size: 100% 100%, auto;
 }
+.ui-li-desc {white-space: normal;}
 
 label.error{display:block; margin: 10px 0; color:#cc0000;}
 
