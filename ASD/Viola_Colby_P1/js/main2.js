@@ -50,17 +50,17 @@ window.addEventListener("DOMContentLoaded", function(){
 	function toggleControls(n){
 		switch(n){
 			case "on":
-				$("movieForm").style.display = "none";
-				$("clear").style.display = "inline";
-				$("displayLink").style.display = "none";
-				$("addNew").style.display = "inline";
+				$("movieForm").hide();
+				$("clear").show();
+				$("displayLink").hide();
+				$("addNew").show();
 				break;
 			case "off":
-			$("movieForm").style.display = "block";
+			$("movieForm").show();
 				$("clear").style.display = "inline";
-				$("displayLink").style.display = "inline";
-				$("addNew").style.display = "none";
-				$("items").style.display = "none";
+				$("displayLink").show();
+				$("addNew").hide();
+				$("items").hide();
 				break;
 			default:
 				return false;
@@ -85,7 +85,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			item.group		= ["Group", $("group").value];
 			item.fname 		= ["Film Name:", $("fname").value];
 			item.rdate 		= ["Release Date:", $("rdate").value];
-			item.pview		= ["Previously Viewed:", pviewValue];
+			item.pview		= ["Prertefef viously Viewed:", pviewValue];
 			item.genre 		= ["Genre:", genreValue];
 			item.range		= ["Rating", $("range").value];
 			item.tlink		= ["Trailer Link", $("tlink").value];
@@ -107,7 +107,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		var makeList = document.createElement("ul");
 		makeDiv.appendChild(makeList);
 		document.body.appendChild(makeDiv);
-		$("items").style.display = "block";
+		$("items").show();
 		for(var i=0, len=localStorage.length; i<len; i++){
 			var makeli = document.createElement("li");
 			var linksLi = document.createElement("li");
@@ -260,7 +260,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			return false;
 		}
 	}
-
+/*
 	//e stands for event data
 	function validate(e){
 		//Define the elements we want to check.
@@ -300,7 +300,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 		
 	}
-	
+	*/
 	//Variable defaults
 	var movieGroup = ["--Choose A Group--", "DVD", "Theaters", "Unknown"],
 		genreValue,
@@ -308,7 +308,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		errMsg = $("errors")
 		;
 	makeCats();
-	
+	/*
 	//Set link & submit click events
 	var displayLink = $("displayLink");
 	displayLink.addEventListener("click", getData);
@@ -316,4 +316,5 @@ window.addEventListener("DOMContentLoaded", function(){
 	clearLink.addEventListener("click", clearLocal);
 	var save = $("submit");
 	save.addEventListener("click", validate);
+	*/
 });
