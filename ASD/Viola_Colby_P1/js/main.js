@@ -1,6 +1,6 @@
 // Colby Viola
-// Project 4
-// Mobile Interfaces and Usability (MIU)
+// Project 1
+// Advanced Scalable Data Infrastructures
 // Mobile Development
 // Full Sail University
 var parseMovieForm = function (data){
