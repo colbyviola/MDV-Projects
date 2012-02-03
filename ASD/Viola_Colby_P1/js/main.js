@@ -4,11 +4,38 @@
 // Mobile Development
 // Full Sail University
 
+var callJSON = function(){
 
+$(function(){
+	$.ajax({
+		async: false,
+		url: "js/list.json",
+		type: "GET",
+		dataType: "json",
+		success: function(response){
+			for(var i=0, j=response.movieInfo.length; i<j; i++){
+				var p = response.movieInfo[i];
+				$("#jsonInput").append("<li>"+ 
+					"<p>"+ p.group +"</p>"+
+					"<p>"+ p.fname +"</p>"+
+					"<p>"+ p.rdate +"</p>"+
+					"<p>"+ p.pview +"</p>"+
+					"<p>"+ p.genre +"</p>"+
+					"<p>"+ p.range +"</p>"+
+					"<p>"+ p.tlink +"</p>"+
+					"<p>"+ p.comments +"</p>"+
+				"</li>"
+				);
+			};
+		}
+	});
+	$("#jsonInput").listview();
+});
+}
 $(document).ready(function(){
 
 	function getData(){
-	
+		
 		for(var i=0, len = localStorage.length; i < len; i++){
 			var key = localStorage.key(i);
 			var num = localStorage.getData(key);
@@ -87,35 +114,6 @@ $(document).ready(function(){
 	};							//end get values of populated form, save to localStorage************
 	
 	//JSON OBJECT which will auto populate local storage.
-	function autoFillData(){
-		var json = {
-			"movie1": {
-				"group": ["Group:", "Theater"],
-				"fname": ["Film Name:", "Immortals"],
-				"rdate": ["Release Date:", "2011-11-11"],
-				"pview": ["Previously Viewed:", "No"],
-				"genre": ["Genre:", "Action"],
-				"range": ["Range:", "7"],
-				"tlink": ["Trailer Link:", "www.immortalsmovie.com"],
-				"comments": ["Comments:", "Probably not going to be the next 300."]
-			},
-			"movie2": {
-				"group": ["Group:", "DVD"],
-				"fname": ["Film Name:", "300"],
-				"rdate": ["Release Date:", "2009-10-10"],
-				"pview": ["Previously Viewed:", "Yes"],
-				"genre": ["Genre:", "Action"],
-				"range": ["Range:", "10"],
-				"tlink": ["Trailer Link:", "www.300movie.com"],
-				"comments": ["Comments:", "Epic."]
-			}
-		};
-		//Store the JSON OBJECT into local Storage.
-		for(var n in json){
-			var id			= Math.floor(Math.random()*100001);	
-			localStorage.setItem(id, JSON.stringify(json[n]));
-		}
-	};
 	
 	function editItem(){
 								//Grab the data from our item in local storage.************
