@@ -32,7 +32,8 @@
 		<div data-role="content">
 			<p><a href="#movielist" data-role="button" data-icon="arrow-r" data-iconpos="right">Browse Movies</a></p>
 			<p><a href="#addmovie" data-role="button" data-icon="arrow-r" data-iconpos="right">Add a Movie</a></p>
-			<p><a href="#newlist" data-role="button" onclick="callJSON();" data-icon="arrow-r" data-iconpos="right">JSON</a></p>	
+			<p><a href="#jsonlist" data-role="button" onclick="callJSON();" data-icon="arrow-r" data-iconpos="right">JSON</a></p>
+			<p><a href="#xmllist" data-role="button" data-icon="arrow-r" data-iconpos="right">XML</a></p>
 		</div>
 		<div data-role="footer" data-position="fixed">
 			<div data-role="navbar">
@@ -43,14 +44,32 @@
 		</div>
 	</div>
 																					<--NEW PAGE-->
-	<div data-role="page" id="newlist" data-add-back-btn="true">
+	<div data-role="page" id="jsonlist" data-add-back-btn="true">
 	
 		<div data-role="header" data-position="fixed">
 			<h1>Movies!</h1>
 		</div>
 		<div data-role="content">
-			<div id="newMovies" data-role="content"></div>
+			<div id="jsonMovies" data-role="content"></div>
 			<div id="jsonInput"></div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-icon="home">Home</a></li>
+				</ul>
+			</div> 
+		</div>
+	</div>
+	
+	<div data-role="page" id="xmllist" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Movies!</h1>
+		</div>
+		<div data-role="content">
+			<div id="xmlMovies" data-role="content"></div>
+			<div id="xmlInput"></div>
 		</div>
 		<div data-role="footer" data-position="fixed">
 			<div data-role="navbar">

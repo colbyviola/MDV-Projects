@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <filmList>
-	<mem>
+	<film>
 		<group>DVD</group>
 		<fname>The Dark Knight</fname>
 		<rdate>2008-07-18</rdate>
@@ -10,8 +10,8 @@
 		<range>10</range>
 		<tlink>www.thedarkknightmovie.com.warnerbros.com</tlink>
 		<comments>Incredible movie.</comments>
-	</mem>
-	<mem>
+	</film>
+	<film>
 		<group>Theater</group>
 		<fname>The Innkeepers</fname>
 		<rdate>2012-02-03</rdate>
@@ -20,8 +20,8 @@
 		<range>04</range>
 		<tlink>www.theinnkeepersmovie.com</tlink>
 		<comments>Looks a little lame.</comments>
-	</mem>
-	<mem>
+	</film>
+	<film>
 		<group>Unknown</group>
 		<fname>Tucker and Dale vs Evil</fname>
 		<rdate>2011-08-03</rdate>
@@ -30,5 +30,5 @@
 		<range>09</range>
 		<tlink>www.tuckeranddale.com</tlink>
 		<comments>Looks like the funniest horror ever made.</comments>
-	</mem>
+	</film>
 </filmList>

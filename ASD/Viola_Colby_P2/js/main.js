@@ -5,33 +5,69 @@
 // Full Sail University
 
 var callJSON = function(){
-
-$(function(){
+	$("#jsonInput").empty();
+	$(function(){
+		$.ajax({
+			async: false,
+			url: "xhr/list.json",
+			type: "GET",
+			dataType: "json",
+			success: function(response){
+				for(var i=0, j=response.movieInfo.length; i<j; i++){
+					var p = response.movieInfo[i];
+					$("#jsonInput").append("<li>"+ 
+						"<p>"+ p.group +"</p>"+
+						"<p>"+ p.fname +"</p>"+
+						"<p>"+ p.rdate +"</p>"+
+						"<p>"+ p.pview +"</p>"+
+						"<p>"+ p.genre +"</p>"+
+						"<p>"+ p.range +"</p>"+
+						"<p>"+ p.tlink +"</p>"+
+						"<p>"+ p.comments +"</p>"+
+					"</li>"
+					);
+				};
+			}
+		});
+		$("#jsonInput").listview();
+	});
+};
+											// Call XML***************
+$("#xmllist").bind("click", function(){
+	$("#xmlInput").empty();
 	$.ajax({
-		async: false,
-		url: "js/list.json",
+		url: "xhr/data.xml",
 		type: "GET",
-		dataType: "json",
-		success: function(response){
-			for(var i=0, j=response.movieInfo.length; i<j; i++){
-				var p = response.movieInfo[i];
-				$("#jsonInput").append("<li>"+ 
-					"<p>"+ p.group +"</p>"+
-					"<p>"+ p.fname +"</p>"+
-					"<p>"+ p.rdate +"</p>"+
-					"<p>"+ p.pview +"</p>"+
-					"<p>"+ p.genre +"</p>"+
-					"<p>"+ p.range +"</p>"+
-					"<p>"+ p.tlink +"</p>"+
-					"<p>"+ p.comments +"</p>"+
-				"</li>"
-				);
-			};
+		dataType: "xml",
+		success: function(xmllist){
+			$(xmllist).find("film").each(function(){
+				var group = $(this).find("group").text();
+   				var fname = $(this).find("fname").text();
+   				var rdate = $(this).find("rdate").text();
+   				var pview = $(this).find("pview").text();
+				var genre = $(this).find("genre").text();
+				var range = $(this).find("range").text();
+				var tlink = $(this).find("tlink").text();
+				var comments = $(this).find("comments").text();
+    			$(""+
+					"<li class='film'>"+
+						"<p>"+ group +"</p>"+
+						"<p>"+ fname +"</p>"+
+						"<p>"+ rdate +"</p>"+
+						"<p>"+ pview +"</p>"+
+						"<p>"+ genre +"</p>"+
+						"<p>"+ range +"</p>"+
+						"<p>"+ tlink +"</p>"+
+						"<p>"+ comments +"</p>"+
+					"</li><hr />"
+				).appendTo("#xmlInput");
+			});
 		}
 	});
-	$("#jsonInput").listview();
+	return false;
 });
-}
+											// End Call XML ************
+
 $(document).ready(function(){
 
 	var getData = function (){
