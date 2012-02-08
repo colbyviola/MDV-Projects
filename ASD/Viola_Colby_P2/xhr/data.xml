@@ -2,14 +2,33 @@
 
 <filmList>
 	<mem>
-		<group></group>
-		<fname></fname>
-		<rdate></rdate>
-		<pview></pview>
-		<genre></genre>
-		<range></range>
-		<tlink></tlink>
-		<comments></comments>
+		<group>DVD</group>
+		<fname>The Dark Knight</fname>
+		<rdate>2008-07-18</rdate>
+		<pview>Yes</pview>
+		<genre>Drama</genre>
+		<range>10</range>
+		<tlink>www.thedarkknightmovie.com.warnerbros.com</tlink>
+		<comments>Incredible movie.</comments>
 	</mem>
-	
+	<mem>
+		<group>Theater</group>
+		<fname>The Innkeepers</fname>
+		<rdate>2012-02-03</rdate>
+		<pview>No</pview>
+		<genre>Thriller</genre>
+		<range>04</range>
+		<tlink>www.theinnkeepersmovie.com</tlink>
+		<comments>Looks a little lame.</comments>
+	</mem>
+	<mem>
+		<group>Unknown</group>
+		<fname>Tucker and Dale vs Evil</fname>
+		<rdate>2011-08-03</rdate>
+		<pview>No</pview>
+		<genre>Horror</genre>
+		<range>09</range>
+		<tlink>www.tuckeranddale.com</tlink>
+		<comments>Looks like the funniest horror ever made.</comments>
+	</mem>
 </filmList>
