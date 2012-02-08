@@ -34,6 +34,7 @@
 			<p><a href="#addmovie" data-role="button" data-icon="arrow-r" data-iconpos="right">Add a Movie</a></p>
 			<p><a href="#jsonlist" data-role="button" onclick="callJSON();" data-icon="arrow-r" data-iconpos="right">JSON</a></p>
 			<p><a href="#xmllist" data-role="button" data-icon="arrow-r" data-iconpos="right">XML</a></p>
+			<p><a href="#csvlist" data-role="button" data-icon="arrow-r" data-iconpos="right">CSV</a></p>
 		</div>
 		<div data-role="footer" data-position="fixed">
 			<div data-role="navbar">
@@ -80,6 +81,23 @@
 		</div>
 	</div>
 																					<!--NEW PAGE-->
+	<div data-role="page" id="csvlist" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Movies!</h1>
+		</div>
+		<div data-role="content">
+			<div id="csvMovies" data-role="content"></div>
+			<div id="csvInput"></div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-icon="home">Home</a></li>
+				</ul>
+			</div> 
+		</div>
+	</div>
 																					<!--NEW PAGE-->																			
 	<div data-role="page" id="movielist" data-add-back-btn="true">
 		

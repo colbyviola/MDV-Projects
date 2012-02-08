@@ -17,13 +17,13 @@ var callJSON = function(){
 					var p = response.movieInfo[i];
 					$("#jsonInput").append("<li>"+ 
 						"<p>"+ p.fname +"</p>"+
-						"<p>"+ p.group +"</p>"+
-						"<p>"+ p.rdate +"</p>"+
-						"<p>"+ p.pview +"</p>"+
-						"<p>"+ p.genre +"</p>"+
-						"<p>"+ p.range +"</p>"+
-						"<p>"+ p.tlink +"</p>"+
-						"<p>"+ p.comments +"</p>"+
+						"<p>"+ "Group: " +  p.group +"</p>"+
+						"<p>"+ "Release Date: " +  p.rdate +"</p>"+
+						"<p>"+ "Previously Viewed: " +  p.pview +"</p>"+
+						"<p>"+ "Genre: " + p.genre +"</p>"+
+						"<p>"+ "Range: " + p.range +"</p>"+
+						"<p>"+ "Trailer Link: " + p.tlink +"</p>"+
+						"<p>"+ "Comments: " + p.comments +"</p>"+
 					"</li><hr />"
 					);
 				};
@@ -52,13 +52,13 @@ $("#xmllist").bind("click", function(){
 				$(""+
 					"<li class='film'>"+
 						"<p>"+ fname +"</p>"+
-						"<p>"+ group +"</p>"+
-						"<p>"+ rdate +"</p>"+
-						"<p>"+ pview +"</p>"+
-						"<p>"+ genre +"</p>"+
-						"<p>"+ range +"</p>"+
-						"<p>"+ tlink +"</p>"+
-						"<p>"+ comments +"</p>"+
+						"<p>"+ "Group: " + group +"</p>"+
+						"<p>"+ "Release Date: " + rdate +"</p>"+
+						"<p>"+ "Previously Viewed: " + pview +"</p>"+
+						"<p>"+ "Genre: " + genre +"</p>"+
+						"<p>"+ "Range: " + range +"</p>"+
+						"<p>"+ "Trailer Link: " + tlink +"</p>"+
+						"<p>"+ "Comments: " + comments +"</p>"+
 					"</li><hr />"
 				).appendTo("#xmlInput");
 			});
@@ -66,9 +66,50 @@ $("#xmllist").bind("click", function(){
 	});
 	return false;
 });
-
 											// End Call XML ************
-
+											//Start Call CSV ***********
+																						// Start csv call**********
+$("#csvlist").bind("click", function(){
+	$("#csvInput").empty();
+	 $.ajax({
+        type: "GET",
+        url: "xhr/data.csv",
+        dataType: "text",
+        success: function(data){
+        	var alldata = data.split(/\r\n|\n/);
+    		var splitdata = alldata[0].split(",");
+    		var lines = []; 
+			for (var i=1; i<alldata.length; i++){
+				var data = alldata[i].split(",");
+				if (data.length == splitdata.length){
+					var movies= []; 
+					for (var j=0; j<splitdata.length; j++){
+						movies.push(data[j]);
+					}
+					lines.push(movies); 
+				}
+			}
+			for (var m=0; m<lines.length; m++){
+				var movie = lines[m];
+			$(""+
+				"<li class='movie'>"+
+					"<p>"+ movie[0] +"<p>"+
+					"<p>"+ "Group: " + movie[1] +"<p>"+
+					"<p>"+ "Release Date: " + movie[2] +"<p>"+
+					"<p>"+ "Previously Viewed: " + movie[3] +"<p>"+
+					"<p>"+ "Genre: " + movie[4] +"<p>"+
+					"<p>"+ "Range: " + movie[5] +"<p>"+
+					"<p>"+ "Tralier Link: " + movie[6] +"<p>"+
+					"<p>"+ "Comments: " + movie[7] +"<p>"+
+				"</li><hr />"
+			).appendTo("#csvInput");
+			}
+        }
+	});
+	return false;
+});
+												//End Call CSV *********
+												//Start Data Collection*
 $(document).ready(function(){
 
 	var getData = function (){
