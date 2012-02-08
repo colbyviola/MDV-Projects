@@ -16,15 +16,15 @@ var callJSON = function(){
 				for(var i=0, j=response.movieInfo.length; i<j; i++){
 					var p = response.movieInfo[i];
 					$("#jsonInput").append("<li>"+ 
-						"<p>"+ p.group +"</p>"+
 						"<p>"+ p.fname +"</p>"+
+						"<p>"+ p.group +"</p>"+
 						"<p>"+ p.rdate +"</p>"+
 						"<p>"+ p.pview +"</p>"+
 						"<p>"+ p.genre +"</p>"+
 						"<p>"+ p.range +"</p>"+
 						"<p>"+ p.tlink +"</p>"+
 						"<p>"+ p.comments +"</p>"+
-					"</li>"
+					"</li><hr />"
 					);
 				};
 			}
@@ -42,17 +42,17 @@ $("#xmllist").bind("click", function(){
 		success: function(xmllist){
 			$(xmllist).find("film").each(function(){
 				var group = $(this).find("group").text();
-   				var fname = $(this).find("fname").text();
-   				var rdate = $(this).find("rdate").text();
-   				var pview = $(this).find("pview").text();
+				var fname = $(this).find("fname").text();
+				var rdate = $(this).find("rdate").text();
+				var pview = $(this).find("pview").text();
 				var genre = $(this).find("genre").text();
 				var range = $(this).find("range").text();
 				var tlink = $(this).find("tlink").text();
 				var comments = $(this).find("comments").text();
-    			$(""+
+				$(""+
 					"<li class='film'>"+
-						"<p>"+ group +"</p>"+
 						"<p>"+ fname +"</p>"+
+						"<p>"+ group +"</p>"+
 						"<p>"+ rdate +"</p>"+
 						"<p>"+ pview +"</p>"+
 						"<p>"+ genre +"</p>"+
@@ -66,6 +66,7 @@ $("#xmllist").bind("click", function(){
 	});
 	return false;
 });
+
 											// End Call XML ************
 
 $(document).ready(function(){
