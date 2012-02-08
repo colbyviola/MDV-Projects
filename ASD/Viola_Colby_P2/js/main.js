@@ -214,7 +214,7 @@ $(document).ready(function(){
 });
 	
 								//e stands for event data******************
-	var validate = function (e){
+	var validate = function(e){
 								//Define the elements we want to check.***************
 		var getGroup = $("group");
 		var getFname = $("fname");
