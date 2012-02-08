@@ -34,7 +34,7 @@ $(function(){
 }
 $(document).ready(function(){
 
-	function getData(){
+	var getData = function (){
 		
 		for(var i=0, len = localStorage.length; i < len; i++){
 			var key = localStorage.key(i);
@@ -75,7 +75,7 @@ $(document).ready(function(){
 		}
 	};
 	
-	function storeData(key){
+	var storeData = function (key){
 									//create unique ID***************
 		if(!key){
 			var id = Math.floor(Math.random()*100001);	
@@ -115,7 +115,7 @@ $(document).ready(function(){
 	
 	//JSON OBJECT which will auto populate local storage.
 	
-	function editItem(){
+	var editItem = function (){
 								//Grab the data from our item in local storage.************
 		var num = localStorage.getData(key);
 			num = num.split(",");
@@ -153,7 +153,7 @@ $(document).ready(function(){
 		save.bind("click", "validate").css("display", "none");
 	}
 	
-	function clearLocal(){
+	var clearLocal = function (){
 		if(localStorage.length === 0){
 			alert("There is no data to clear.");
 		}else{
@@ -164,7 +164,7 @@ $(document).ready(function(){
 		}
 	}
 	
-	function deleteItem(){
+	var deleteItem = function(){
 		var ask = confirm("Are you sure you want to delete this movie?");
 		if(ask){
 			localStorage.removeItem(this.key);
@@ -177,7 +177,7 @@ $(document).ready(function(){
 });
 	
 								//e stands for event data******************
-	function validate(e){
+	var validate = function (e){
 								//Define the elements we want to check.***************
 		var getGroup = $("group");
 		var getFname = $("fname");
