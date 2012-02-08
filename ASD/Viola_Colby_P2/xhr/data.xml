@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <filmList>
-
+	<mem>
+		<group></group>
+		<fname></fname>
+		<rdate></rdate>
+		<pview></pview>
+		<genre></genre>
+		<range></range>
+		<tlink></tlink>
+		<comments></comments>
+	</mem>
+	
 </filmList>
