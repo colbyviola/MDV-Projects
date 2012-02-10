@@ -1,5 +1,5 @@
 // Colby Viola
-// Project 1
+// Project 2
 // Advanced Scalable Data Infrastructures
 // Mobile Development
 // Full Sail University
@@ -71,7 +71,7 @@ $("#xmllist").bind("click", function(){
 																						// Start csv call**********
 $("#csvlist").bind("click", function(){
 	$("#csvInput").empty();
-	 $.ajax({
+	$.ajax({
         type: "GET",
         url: "xhr/data.csv",
         dataType: "text",
@@ -104,13 +104,13 @@ $("#csvlist").bind("click", function(){
 				"</li><hr />"
 			).appendTo("#csvInput");
 			}
-        }
+    	}
 	});
 	return false;
 });
 												//End Call CSV *********
 												//Start Data Collection*
-$(document).ready(function(){
+$("#home").live("pageinit", function(){
 
 	var getData = function (){
 		
@@ -222,13 +222,13 @@ $(document).ready(function(){
 		var editSubmit = $("submit");
 								//Save the key value established in this function as a property of the editSubmit event
 								//so we can use that value when edited data is saved.
-		editSubmit.bind("click", "validate");
+		editSubmit.bind("click", validate);
 		editSubmit.key = this.key;
 		
-		var clearLink = $("clear");
-		clearLink.bind("click", "clearLocal").css("display", "inline");
-		var save = $("submit");
-		save.bind("click", "validate").css("display", "none");
+		var clearLink = $("#clear");
+		clearLink.bind("click", clearLocal).css("display", "inline");
+		var save = $("#submit");
+		save.bind("click", validate).css("display", "none");
 	}
 	
 	var clearLocal = function (){
@@ -253,48 +253,7 @@ $(document).ready(function(){
 		}
 	}
 });
-	
-								//e stands for event data******************
-	var validate = function(e){
-								//Define the elements we want to check.***************
-		var getGroup = $("group");
-		var getFname = $("fname");
-		var errMsg = $("errors");
-								//Reset Error messages.*********************
-		errMsg.html("");
-		getGroup.css("border","1px solid black");
-		getFname.css("border","1px solid black");
-								//Get error messages.
-		var messageAry = [];
-								//Group validation************************
-		if(getGroup.value === "--Choose A Group--"){
-			var groupError = "Please choose a group.";
-			getGroup.css("border","1px solid red");
-			messageAry.push(groupError);
-		}
-								//Film name validation********************
-		if(getFname.value === ""){
-			var fNameError = "Please enter a film name.";
-			getFname.css("border","1px solid red");
-			messageAry.push(fNameError);
-		}
-								//If there were errors, display them on the screen.************
-		if(messageAry.length >= 1){
-			for(var i=0, j=messageAry.length; i < j; i++){
-				var txt = document.append("li");
-				txt.html("messageAry[i]");
-				errMsg.appendChild(txt);
-			}
-		e.preventDefault();
-		return false;
-		}else{
-								//If all is OK, save our data. Send the key value (orginated from editData function).***********
-								//Remember this key value was passed through editSubmit event listener as a property.***********
-			storeData(this.key);
-		}
-	}
-/*
-});
+
 var parseMovieForm = function (data){
 	// uses form data here;
 	console.log(data);
@@ -302,26 +261,24 @@ var parseMovieForm = function (data){
 
 //$(document).ready(function(){
 	
-	var amform = $("#addmovieform"),
-		amerrorslink = $("amerrorslink")
-	;
-	
-	amform.validate({
-		invalidHandler: function(form, validator){
-			amerrorslink.bind("click");
-			var html ="";
-			for(var key in validator.submitted){
-				var label = $('label[for^="'+ key +'"]').not("[generated]");
-				var legend = label.closest("fieldset").find(".ui-controlgroup-label");
-				var fieldName= legend.length ? legend.text() : label.text();
-				html += "<li>"+ fieldName +"</li>";
-			}
-			$("#addmovieerrors ul").html(html);
-		},
-		submitHandler: function(){
-			var data = amform.serializeArray();
-			parseMovieForm(data);
+var amform = $("#addmovieform"),
+	amerrorslink = $("#amerrorslink")
+;
+
+amform.validate({
+	invalidHandler: function(form, validator){
+		amerrorslink.bind("click");
+		var html ="";
+		for(var key in validator.submitted){
+			var label = $('label[for^="'+ key +'"]').not("[generated]");
+			var legend = label.closest("fieldset").find(".ui-controlgroup-label");
+			var fieldName= legend.length ? legend.text() : label.text();
+			html += "<li>"+ fieldName +"</li>";
 		}
-	});
+		$("#addmovieerrors ul").html(html);
+	},
+	submitHandler: function(){
+		var data = amform.serializeArray();
+		parseMovieForm(data);
+	}
 });
-*/
